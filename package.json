@@ -17,8 +17,7 @@
     "start": "sui-studio start",
     "storybook:start": "start-storybook -p 6006 -c components/documentation/library/.storybook/",
     "storybook:build": "build-storybook -o dist/storybook",
-    "test": "sui-studio test",
-    "test:watch": "sui-studio test --watch"
+    "test": "cd components/documentation/library/ && npm run test"
   },
   "repository": {
     "type": "git",
