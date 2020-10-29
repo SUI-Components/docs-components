@@ -1,0 +1,41 @@
+{
+  "name": "@s-ui/documentation-library",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/main.js",
+  "scripts": {
+    "prepare": "npx rimraf ./lib && npm run build:js && npm run build:styles && npm run doc && ./scripts/copyFiles.js \"src/components/**/!(*.*).md\" \"src\" \"lib\"",
+    "build:js": "../../../node_modules/.bin/babel --presets sui ./src --out-dir ./lib",
+    "build:styles": "../../../node_modules/.bin/cpx './src/**/*.scss' ./lib",
+    "prettier:js": "npx prettier --write src/**/*.js",
+    "doc": "./scripts/findComponents.js | ./scripts/docComponents.js",
+    "test": "jest",
+    "test:update": "jest -u"
+  },
+  "dependencies": {
+    "@s-ui/component-dependencies": "1",
+    "react-icons": "3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SUI-Components/docs-components.git"
+  },
+  "github": "git@github.com:SUI-Components/docs-components",
+  "homepage": "https://github.com/SUI-Components/docs-components/",
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "7",
+    "@babel/preset-env": "7",
+    "@babel/preset-react": "7",
+    "@testing-library/react": "11",
+    "jest": "26",
+    "jest-extended": "0",
+    "minimatch": "3",
+    "react-docgen": "5",
+    "react-dom": "17",
+    "react-extra-prop-types": "0",
+    "squirrelly": "8"
+  }
+}

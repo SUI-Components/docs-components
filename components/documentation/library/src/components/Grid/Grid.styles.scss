@@ -1,0 +1,24 @@
+.sui-studio-doc-grid {
+  display: grid;
+  &-mode {
+    &-light {
+      color: var(--c-sui-studio-doc-base);
+    }
+    &-dark {
+      color: var(--c-sui-studio-doc-neutral0);
+    }
+  }
+  &-cell {
+    &-ta {
+      &-left {
+        text-align: left;
+      }
+      &-right {
+        text-align: right;
+      }
+      &-center {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.sui-studio-doc-avatar {
+  &.sui-studio-doc-avatar-shape {
+    &-circled {
+      border-radius: 50%;
+    }
+    &-squared {
+      border-radius: 0;
+    }
+    &-rounded {
+      border-radius: 5px;
+    }
+  }
+  &.sui-studio-doc-avatar-size {
+    &-xs {
+      width: 16px;
+    }
+    &-sm {
+      width: 32px;
+    }
+    &-md {
+      width: 64px;
+    }
+    &-lg {
+      width: 128px;
+    }
+    &-xl {
+      width: 256px;
+    }
+  }
+}

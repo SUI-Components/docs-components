@@ -1,0 +1,21 @@
+# {{it.package.name}}
+
+> v{{it.package.version}}
+
+>
+> {{it.package.github}}
+
+
+## Install
+`npm install {{it.package.name}}`
+
+## Components
+{{@foreach(it.components) => displayName, componentValue}}
+> #### [**{{componentValue.component.displayName}}**]({{it.package.homepage}}blob/master/components/documentation/library/src/components/{{componentValue.key}}/{{componentValue.component.displayName}}.md)
+> {{componentValue.component.description}}
+
+
+{{/foreach}}
+
+
+

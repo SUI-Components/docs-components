@@ -1,0 +1,28 @@
+import {Meta} from '@storybook/addon-docs/blocks'
+import {
+  Article,
+  Cell,
+  Grid,
+} from './main'
+import Demo from './Demo'
+
+<Meta title="DOC/Demo" />
+
+# Demo
+
+<Grid cols={1} gutter={10}>
+  <Cell>
+    <Grid cols={2} gutter={[5, 10]}>
+      <Cell>
+        <Article>
+          <Demo />
+        </Article>
+      </Cell>
+      <Cell>
+        <Article mode="dark">
+          <Demo />
+        </Article>
+      </Cell>
+    </Grid>
+  </Cell>
+</Grid>

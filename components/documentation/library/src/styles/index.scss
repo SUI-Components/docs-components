@@ -1,0 +1,24 @@
+@import './color-palete';
+@import './font';
+@import './spacing';
+
+@import './globals';
+
+@import '../components/Base';
+
+@import '../components/Anchor/Anchor.styles';
+@import '../components/Article/Article.styles';
+@import '../components/Avatar/Avatar.styles';
+@import '../components/Box/Box.styles';
+@import '../components/Button/Button.styles';
+@import '../components/Code/Code.styles';
+@import '../components/Grid/Grid.styles';
+@import '../components/Heading/Heading.styles';
+@import '../components/Icon/Icon.styles';
+@import '../components/Input/Input.styles';
+@import '../components/Label/Label.styles';
+@import '../components/List/List.styles';
+@import '../components/Paragraph/Paragraph.styles';
+@import '../components/Quote/Quote.styles';
+@import '../components/Separator/Separator.styles';
+@import '../components/Text/Text.styles';

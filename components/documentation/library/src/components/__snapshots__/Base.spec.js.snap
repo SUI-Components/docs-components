@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Base default should assign default element in class is given 1`] = `
+<div
+  id="test-container"
+>
+  <span
+    class="sui-studio-doc test-classname"
+  >
+    children
+  </span>
+</div>
+`;
+
+exports[`Base default should assign default elementType if fontWeight is given 1`] = `
+<div
+  id="test-container"
+>
+  <span
+    class="sui-studio-doc sui-studio-doc-fw-bold"
+  >
+    children
+  </span>
+</div>
+`;
+
+exports[`Base default should assign default elementType if it is deprecated 1`] = `
+<div
+  id="test-container"
+>
+  <span
+    class="sui-studio-doc sui-studio-doc-deprecated"
+  >
+    children
+  </span>
+</div>
+`;
+
+exports[`Base default should assign default elementType if textDecoration is given 1`] = `
+<div
+  id="test-container"
+>
+  <span
+    class="sui-studio-doc sui-studio-doc-td-underline"
+  >
+    children
+  </span>
+</div>
+`;
+
+exports[`Base default should assign default elementType if textTransform is given 1`] = `
+<div
+  id="test-container"
+>
+  <span
+    class="sui-studio-doc sui-studio-doc-tt-capitalize"
+  >
+    children
+  </span>
+</div>
+`;
+
+exports[`Base default should display children only 1`] = `
+<div
+  id="test-container"
+>
+  children
+</div>
+`;
+
+exports[`Base default should have proper displayName attribute 1`] = `"Base"`;
+
+exports[`Base default should render elementType if an element is given 1`] = `
+<div
+  id="test-container"
+>
+  <element-type
+    classname="sui-studio-doc"
+  >
+    children
+  </element-type>
+</div>
+`;

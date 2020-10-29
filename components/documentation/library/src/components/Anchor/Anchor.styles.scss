@@ -1,0 +1,8 @@
+.sui-studio-doc-anchor {
+  font-weight: var(--fw-sui-studio-doc-regular);
+  text-decoration: underline;
+  color: var(--c-sui-studio-doc-link);
+  &.sui-studio-doc-mode-dark {
+    color: var(--c-sui-studio-doc-dark-mode-link);
+  }
+}
