@@ -27,7 +27,7 @@
   }
   // STUDIO DOC COLORS
   // grey
-  @include color-step('neutral', var(--c-palette-neutral-hue), 0%, 3, 97);
+  @include color-step('neutral', var(--c-palette-neutral-hue), 0%, 0, 97);
   --c-sui-studio-doc-neutral-lightest: var(--c-sui-studio-doc-neutral3);
   --c-sui-studio-doc-neutral-light: var(--c-sui-studio-doc-neutral4);
   --c-sui-studio-doc-neutral: var(--c-sui-studio-doc-neutral5);
@@ -106,7 +106,7 @@
 
   // sui-studio colors
   --c-sui-studio-doc-white: var(--c-palette-white);
-  --c-sui-studio-doc-base: var(--c-palette-dark-charcoal);
+  // --c-sui-studio-doc-base: var(--c-palette-dark-charcoal);
   // --c-sui-studio-doc-link: var(--c-palette-dark-charcoal);
   --c-sui-studio-doc-hightlight: var(--c-palette-hot-pink);
 

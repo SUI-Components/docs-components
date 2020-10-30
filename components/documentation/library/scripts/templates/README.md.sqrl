@@ -1,9 +1,8 @@
 # {{it.package.name}}
 
-> v{{it.package.version}}
+> gh: [{{it.package.github}}]({{it.package.github}})
 
->
-> {{it.package.github}}
+> homepage: [{{it.package.homepage}}]({{it.package.homepage}})
 
 
 ## Install

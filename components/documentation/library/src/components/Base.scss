@@ -1,5 +1,5 @@
 .sui-studio-doc {
-  color: var(--c-sui-studio-doc-base);
+  color: var(--c-sui-studio-doc-neutral10);
   font-family: var(--ff-sui-studio-doc-sans-serif);
   font-weight: var(--fw-sui-studio-doc-lighter);
   line-height: 1.4;
@@ -75,6 +75,9 @@
       width: 100%;
     }
     &-mode {
+      &-light {
+        color: var(--c-sui-studio-doc-neutral10);
+      }
       &-dark {
         color: var(--c-sui-studio-doc-neutral0);
       }

@@ -1,5 +1,5 @@
 # @s-ui/documentation-library
-> v1.0.0
+> v1.1.0
 >
 > git@github.com:SUI-Components/docs-components
 
