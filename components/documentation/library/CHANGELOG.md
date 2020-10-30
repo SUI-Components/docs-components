@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.1.0 (2020-10-30)
+
+
+### Bug Fixes
+
+* extra-prop-types library dependency ([2a71e30](https://github.com/SUI-Components/docs-components/commit/2a71e300619676d919af5877db7d9301f71afaf8))
+
+
+
 # 1.3.0 (2020-10-29)
 
 
