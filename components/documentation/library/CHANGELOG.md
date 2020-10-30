@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.2.0 (2020-10-30)
+
+
+### Bug Fixes
+
+* style fixing ([326c616](https://github.com/SUI-Components/docs-components/commit/326c6168eb0f69f79b19447d07229a6a956f80c7))
+
+
+
 # 1.1.0 (2020-10-30)
 
 
