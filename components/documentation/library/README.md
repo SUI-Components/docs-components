@@ -1,7 +1,8 @@
 # @s-ui/documentation-library
-> v1.1.0
->
-> git@github.com:SUI-Components/docs-components
+> gh: [git@github.com:SUI-Components/docs-components](git@github.com:SUI-Components/docs-components)
+
+> homepage: [https://github.com/SUI-Components/docs-components/](https://github.com/SUI-Components/docs-components/)
+
 
 ## Install
 `npm install @s-ui/documentation-library`
