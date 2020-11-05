@@ -45,6 +45,9 @@ const Radio = ({
       setContextState({value})
     }
     setCheckedState(!checkedState)
+    if (onClick) {
+      onClick(event, event.target.checked === true ? value : undefined)
+    }
   }
   return (
     <>
@@ -75,6 +78,10 @@ Radio.propTypes = {
    * initial checkbox value
    */
   defaultChecked: PropTypes.bool,
+  /*
+   * on click callback event (event, value)
+   */
+  onClick: PropTypes.func,
   /**
    * element value result
    */
@@ -94,11 +101,17 @@ const RadioGroup = ({
   value,
   label,
   name,
+  onChange,
   ...props
 }) => {
   const [context, setContext] = useState({name, label, value})
-  const setContextState = (newContext = {}) =>
-    setContext({...context, ...newContext})
+  const setContextState = (newArguments = {}) => {
+    const newContext = {...context, ...newArguments}
+    if (onChange) {
+      onChange(newContext.value)
+    }
+    setContext(newContext)
+  }
   return (
     <Base
       {...props}
@@ -116,7 +129,12 @@ const RadioGroup = ({
 }
 
 RadioGroup.displayName = 'RadioGroup'
-RadioGroup.propTypes = {}
+RadioGroup.propTypes = {
+  /*
+   * on click callback event (event, value)
+   */
+  onClick: PropTypes.func
+}
 RadioGroup.defaultProps = {}
 
 export default Radio

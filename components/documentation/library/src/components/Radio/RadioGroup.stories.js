@@ -18,5 +18,12 @@ const Template = ({...args}) => (
 
 export const Base = Template.bind({})
 
-Base.args = {defaultChecked: false, label: 'label', name: 'name'}
+Base.args = {
+  defaultChecked: false,
+  label: 'label',
+  name: 'name',
+  onChange: value => {
+    console.log({value})
+  }
+}
 Base.argTypes = {}

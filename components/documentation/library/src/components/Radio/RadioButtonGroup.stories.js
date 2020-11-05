@@ -18,7 +18,12 @@ const Template = ({...args}) => (
 
 export const Base = Template.bind({})
 
-Base.args = {name: 'name'}
+Base.args = {
+  name: 'name',
+  onChange: value => {
+    console.log({value})
+  }
+}
 Base.argTypes = {}
 
 export const FullWidth = args => <Template {...args} fullWidth />

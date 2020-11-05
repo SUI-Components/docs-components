@@ -12,5 +12,11 @@ const Template = ({...args}) => <RadioButton {...args} />
 
 export const Base = Template.bind({})
 
-Base.args = {label: 'label', value: 'value'}
+Base.args = {
+  label: 'label',
+  value: 'value',
+  onClick: (event, value) => {
+    console.log({event, value})
+  }
+}
 Base.argTypes = {}

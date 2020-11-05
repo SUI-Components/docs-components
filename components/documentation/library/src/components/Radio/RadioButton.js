@@ -16,6 +16,7 @@ const RadioButton = ({
   label,
   value,
   className,
+  onClick,
   onChange,
   defaultChecked = false,
   checked,
@@ -40,6 +41,9 @@ const RadioButton = ({
       setContextState({value})
     }
     setCheckedState(!checkedState)
+    if (onClick) {
+      onClick(event, !checkedState === true ? value : undefined)
+    }
   }
   return (
     <Button
@@ -64,7 +68,12 @@ const RadioButton = ({
 }
 
 RadioButton.displayName = 'RadioButton'
-RadioButton.propTypes = {}
+RadioButton.propTypes = {
+  /*
+   * on click callback event (event, value)
+   */
+  onClick: PropTypes.func
+}
 RadioButton.defaultProps = {
   checked: false
 }
@@ -75,13 +84,13 @@ const RadioButtonGroup = ({
   className,
   children,
   elementType = 'div',
-  onSelect,
+  onChange,
   name,
   value,
   ...props
 }) => {
   return (
-    <RadioGroup name={name} value={value}>
+    <RadioGroup onChange={onChange} name={name} value={value}>
       <ButtonGroup
         {...props}
         className={cx('sui-studio-doc-radio-button', className)}
@@ -95,6 +104,9 @@ const RadioButtonGroup = ({
 
 RadioButtonGroup.displayName = 'RadioButtonGroup'
 RadioButtonGroup.propTypes = {
+  /*
+   * form field name
+   */
   name: PropTypes.string.isRequired
 }
 RadioButtonGroup.defaultProps = {}
