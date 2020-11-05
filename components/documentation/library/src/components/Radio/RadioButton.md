@@ -23,5 +23,6 @@ import { RadioButton } from '@s-ui/documentation-library'
 
 | Name | Description | Values  | Default | Required |
 | ---: |:---:| ---:| ---: |:---: |
+| onClick |  | | |  [ ]  |
 | defaultChecked | undefined | | |  [ ]  |
 | checked | undefined | | |  [ ]  |
