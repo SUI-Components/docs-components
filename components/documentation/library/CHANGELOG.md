@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.6.0 (2020-11-05)
+
+
+### Features
+
+* radio handlers ([980c73e](https://github.com/SUI-Components/docs-components/commit/980c73e140f90588587bd66d7e364d6419301f67))
+
+
+
 # 1.5.0 (2020-11-05)
 
 
