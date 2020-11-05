@@ -1,5 +1,5 @@
 # RadioButton
-The `&lt;input type=&quot;radio&quot;&gt; defines a radio button styled like a button.
+The `&lt;input type=&quot;radio&quot;&gt;` defines a radio button styled like a button.
 RadioButton buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). Only one radio button in a group can be selected at the same time.
 
 ## Installation

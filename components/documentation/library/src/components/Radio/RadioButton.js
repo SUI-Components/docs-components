@@ -9,7 +9,7 @@ import {Button, ButtonGroup} from '../Button/Button'
 import './Radio.scss'
 
 /**
- * The `<input type="radio"> defines a radio button styled like a button.
+ * The `<input type="radio">` defines a radio button styled like a button.
  * RadioButton buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). Only one radio button in a group can be selected at the same time.
  */
 const RadioButton = ({

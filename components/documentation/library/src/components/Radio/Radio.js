@@ -11,7 +11,7 @@ import './Radio.scss'
 export const RadioGroupContext = React.createContext()
 
 /**
- * The `input type="radio"` defines a radio button.
+ * The `<input type="radio">` defines a radio button.
  * RadioButton buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). Only one radio button in a group can be selected at the same time.
  */
 const Radio = ({

@@ -87,14 +87,14 @@
 > The HTML `q` element indicates that the enclosed text is a short inline quotation. Most modern browsers implement this by surrounding the text in quotation marks.
 
 > #### [**Radio**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/Radio/Radio.md)
-> The `input type=&quot;radio&quot;` defines a radio button.
+> The `&lt;input type=&quot;radio&quot;&gt;` defines a radio button.
 RadioButton buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). Only one radio button in a group can be selected at the same time.
 
 > #### [**RadioGroup**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/Radio/RadioGroup.md)
 > Radio options element wrapper
 
 > #### [**RadioButton**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/RadioButton/RadioButton.md)
-> The `&lt;input type=&quot;radio&quot;&gt; defines a radio button styled like a button.
+> The `&lt;input type=&quot;radio&quot;&gt;` defines a radio button styled like a button.
 RadioButton buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). Only one radio button in a group can be selected at the same time.
 
 > #### [**RadioButtonGroup**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/RadioButton/RadioButtonGroup.md)
