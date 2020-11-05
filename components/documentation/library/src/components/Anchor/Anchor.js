@@ -6,8 +6,10 @@ import cx from 'classnames'
 
 import Base from '../Base.core'
 
+import './Anchor.scss'
+
 export const isExternalURL = url => {
-  var match = url.match(
+  const match = url.match(
     /^([^:/?#]+:)?(?:\/\/([^/?#]*))?([^?#]+)?(\?[^#]*)?(#.*)?/
   )
   if (

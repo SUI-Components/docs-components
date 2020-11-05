@@ -5,6 +5,8 @@ import cx from 'classnames'
 
 import {withConditionalProvider} from '../Base.core'
 
+import './Box.scss'
+
 /**
  * A Box can be used to display content related to a single subject DOC styled
  */

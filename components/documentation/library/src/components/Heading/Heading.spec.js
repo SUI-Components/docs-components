@@ -13,7 +13,9 @@ describe('Heading', () => {
 
     test('should render without crashing', () => {
       // Given
-      const props = {}
+      const props = {
+        elementType: 'h1'
+      }
 
       // When
       const component = <Component {...props} />
@@ -26,7 +28,9 @@ describe('Heading', () => {
 
     test('should NOT render null', () => {
       // Given
-      const props = {}
+      const props = {
+        elementType: 'h1'
+      }
 
       // When
       const {container} = setup(props)

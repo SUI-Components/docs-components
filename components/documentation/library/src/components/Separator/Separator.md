@@ -1,16 +1,10 @@
 # Separator
-> version undefined
-
 The HTML `hr` element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
 
 ## Installation
 `npm install @s-ui/documentation-library`
 
 ## Usage
-```scss
-// include Separator SASS module
-@include '@s-ui/documentation-library/lib/components/Separator/Separator.scss'
-```
 
 ```js
 // import Separator DOC component
@@ -18,11 +12,6 @@ import { Separator } from '@s-ui/documentation-library/lib/components/Separator/
 ```
 
 or
-
-```scss
-// include all SASS modules
-@include '@s-ui/documentation-library/lib/index.scss'
-```
 
 ```js
 // import all DOC components you need

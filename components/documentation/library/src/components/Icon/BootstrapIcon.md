@@ -1,16 +1,10 @@
 # BootstrapIcon
-> version undefined
-
 Bootstrap icon DOC styled
 
 ## Installation
 `npm install @s-ui/documentation-library`
 
 ## Usage
-```scss
-// include BootstrapIcon SASS module
-@include '@s-ui/documentation-library/lib/components/BootstrapIcon/BootstrapIcon.scss'
-```
 
 ```js
 // import BootstrapIcon DOC component
@@ -18,11 +12,6 @@ import { BootstrapIcon } from '@s-ui/documentation-library/lib/components/Bootst
 ```
 
 or
-
-```scss
-// include all SASS modules
-@include '@s-ui/documentation-library/lib/index.scss'
-```
 
 ```js
 // import all DOC components you need

@@ -1,9 +1,9 @@
-@import 'src/styles/color-palete';
-@import 'src/styles/font';
-@import 'src/styles/spacing';
+@import '../../styles/color-palete';
+@import '../../styles/font';
+@import '../../styles/spacing';
 
-@import 'src/styles/globals';
+@import '../../styles/globals';
 
-@import 'src/components/Base';
+@import '../Base';
 
-@import 'Label.styles';
+@import './Label.styles';

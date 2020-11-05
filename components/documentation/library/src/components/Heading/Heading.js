@@ -5,12 +5,14 @@ import cx from 'classnames'
 
 import Base from '../Base.core'
 
+import './Heading.scss'
+
 export const HEADING_ELEMENT = {
   h1: {
     elementType: 'h1',
     className: (cn, mode) =>
       cx(
-        'sui-studio-doc-heading',
+        'sui-studio-doc-hseading',
         'sui-studio-doc-heading-h1',
         {
           [`sui-studio-doc-heading-mode-${mode}`]: mode

@@ -7,6 +7,8 @@ import {IconContext} from 'react-icons'
 
 import Base from '../Base.core'
 
+import './FeatherIcon.scss'
+
 /**
  * Feather Icon DOC styled
  */

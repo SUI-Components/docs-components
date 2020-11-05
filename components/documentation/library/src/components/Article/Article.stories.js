@@ -3,7 +3,6 @@ import React from 'react'
 
 import Article from './Article'
 import {H1} from '../Heading/Heading'
-import Box from '../Box/Box'
 import Text from '../Text/Text'
 import Paragraph from '../Paragraph/Paragraph'
 import Grid, {Cell} from '../Grid/Grid'
@@ -53,56 +52,56 @@ export const Trial = args => (
         </Article>
       </Cell>
       <Cell>
-        <Box color="lightgrey">
+        <Article color="lightgrey">
           <Grid cols={2} gutter={[10, 10]}>
             <Cell>
-              <Box>
+              <Article>
                 <Text>Text</Text>
-              </Box>
+              </Article>
             </Cell>
             <Cell>
-              <Box mode="dark">
+              <Article mode="dark">
                 <Text>Text</Text>
-              </Box>
+              </Article>
             </Cell>
             <Cell>
-              <Box outline>
+              <Article outline>
                 <Text>Text</Text>
-              </Box>
+              </Article>
             </Cell>
             <Cell>
-              <Box outline mode="dark">
+              <Article outline mode="dark">
                 <Text>Text</Text>
-              </Box>
+              </Article>
             </Cell>
           </Grid>
-        </Box>
+        </Article>
       </Cell>
       <Cell>
-        <Box mode="dark" color="lightgrey">
+        <Article mode="dark" color="lightgrey">
           <Grid cols={2} gutter={[10, 10]}>
             <Cell>
-              <Box>
+              <Article>
                 <Text>Text</Text>
-              </Box>
+              </Article>
             </Cell>
             <Cell>
-              <Box mode="light">
+              <Article mode="light">
                 <Text>Text</Text>
-              </Box>
+              </Article>
             </Cell>
             <Cell>
-              <Box outline>
+              <Article outline>
                 <Text>Text</Text>
-              </Box>
+              </Article>
             </Cell>
             <Cell>
-              <Box outline mode="light">
+              <Article outline mode="light">
                 <Text>Text</Text>
-              </Box>
+              </Article>
             </Cell>
           </Grid>
-        </Box>
+        </Article>
       </Cell>
     </Grid>
   </>

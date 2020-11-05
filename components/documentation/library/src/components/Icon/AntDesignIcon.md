@@ -1,16 +1,10 @@
 # AntDesignIcon
-> version undefined
-
 Ant-Design icon DOC styled
 
 ## Installation
 `npm install @s-ui/documentation-library`
 
 ## Usage
-```scss
-// include AntDesignIcon SASS module
-@include '@s-ui/documentation-library/lib/components/AntDesignIcon/AntDesignIcon.scss'
-```
 
 ```js
 // import AntDesignIcon DOC component
@@ -18,11 +12,6 @@ import { AntDesignIcon } from '@s-ui/documentation-library/lib/components/AntDes
 ```
 
 or
-
-```scss
-// include all SASS modules
-@include '@s-ui/documentation-library/lib/index.scss'
-```
 
 ```js
 // import all DOC components you need

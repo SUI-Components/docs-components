@@ -4,6 +4,8 @@ import cx from 'classnames'
 
 import Base from '../Base.core'
 
+import './Text.scss'
+
 export const TEXT_ELEMENT = {
   b: {
     elementType: 'b',
@@ -55,8 +57,12 @@ export const TEXT_ELEMENT = {
 /**
  * Simple plain text styled
  */
-const Text = ({elementType = 'span', children, ...props}) => (
-  <Base {...props} elementType={elementType}>
+const Text = ({elementType = 'span', className, children, ...props}) => (
+  <Base
+    {...props}
+    elementType={elementType}
+    className={cx('sui-studio-doc-text', className)}
+  >
     {children}
   </Base>
 )

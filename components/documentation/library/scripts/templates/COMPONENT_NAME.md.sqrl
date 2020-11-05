@@ -1,8 +1,5 @@
 # {{it.component.displayName}}
 
-> version {{it.package.vesion}}
-
-
 {{it.component.description}}
 
 
@@ -10,10 +7,6 @@
 `npm install {{it.package.name}}`
 
 ## Usage
-```scss
-// include {{it.component.displayName}} SASS module
-@include '{{it.package.name}}/lib/components/{{it.key}}/{{it.key}}.scss'
-```
 
 ```js
 // import {{it.component.displayName}} DOC component
@@ -21,11 +14,6 @@ import { {{ it.component.displayName }} } from '{{it.package.name}}/lib/componen
 ```
 
 or
-
-```scss
-// include all SASS modules
-@include '{{it.package.name}}/lib/index.scss'
-```
 
 ```js
 // import all DOC components you need

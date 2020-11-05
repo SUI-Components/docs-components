@@ -4,6 +4,8 @@ import cx from 'classnames'
 
 import Base from '../Base.core'
 
+import './Button.scss'
+
 /**
  * HTML `button` element DOC styled. Triggers an operation on click.
  */

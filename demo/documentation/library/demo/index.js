@@ -1,7 +1,7 @@
 import React from 'react'
 
 import DocumentationLibrary from '../../../../components/documentation/library/src/index'
-import Demo from '../../../../components/documentation/library/src/Demo'
+import Demo from '../../../../components/documentation/library/src/Demo.core'
 
 import './index.scss'
 

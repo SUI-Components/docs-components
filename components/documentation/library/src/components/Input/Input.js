@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 
 import Base from '../Base.core'
 
+import './Input.scss'
+
 /**
  * HTML `input` element DOC styled
  */
@@ -26,7 +28,7 @@ Input.propTypes = {
   /**
    * element type
    */
-  elementType: PropTypes.bool,
+  elementType: PropTypes.string,
   /**
    * children
    */

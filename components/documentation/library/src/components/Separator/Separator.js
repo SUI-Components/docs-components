@@ -5,16 +5,12 @@ import cx from 'classnames'
 import Context from '../../context/Mode'
 import Base, {MODES} from '../Base.core'
 
+import './Separator.scss'
+
 /**
  * The HTML `hr` element represents a thematic break between paragraph-level elements: for example, a change of scene in a story, or a shift of topic within a section.
  */
-const Separator = ({
-  children,
-  className,
-  elementType = 'span',
-  mode,
-  ...props
-}) => {
+const Separator = ({children, className, elementType, mode, ...props}) => {
   const contextProps = useContext(Context) || {}
   const ownMode = mode || contextProps.mode
   return (
@@ -45,7 +41,9 @@ const Separator = ({
 
 Separator.displayName = 'Separator'
 Separator.propTypes = {}
-Separator.defaultProps = {}
+Separator.defaultProps = {
+  elementType: 'span'
+}
 
 export default Separator
 

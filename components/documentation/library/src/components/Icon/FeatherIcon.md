@@ -1,16 +1,10 @@
 # FeatherIcon
-> version undefined
-
 Feather Icon DOC styled
 
 ## Installation
 `npm install @s-ui/documentation-library`
 
 ## Usage
-```scss
-// include FeatherIcon SASS module
-@include '@s-ui/documentation-library/lib/components/FeatherIcon/FeatherIcon.scss'
-```
 
 ```js
 // import FeatherIcon DOC component
@@ -18,11 +12,6 @@ import { FeatherIcon } from '@s-ui/documentation-library/lib/components/FeatherI
 ```
 
 or
-
-```scss
-// include all SASS modules
-@include '@s-ui/documentation-library/lib/index.scss'
-```
 
 ```js
 // import all DOC components you need

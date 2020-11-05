@@ -16,6 +16,8 @@ import {Label} from './components/Label/Label.js'
 import {UnorderedList, OrderedList, ListItem} from './components/List/List.js'
 import {Paragraph} from './components/Paragraph/Paragraph.js'
 import {Quote} from './components/Quote/Quote.js'
+import {Radio, RadioGroup} from './components/Radio/Radio.js'
+import {RadioButton, RadioButtonGroup} from './components/Radio/RadioButton.js'
 import {Separator} from './components/Separator/Separator.js'
 import {
   Text,
@@ -58,6 +60,10 @@ export default class DocumentationLibrary {
   static ListItem = ListItem
   static Paragraph = Paragraph
   static Quote = Quote
+  static Radio = Radio
+  static RadioGroup = RadioGroup
+  static RadioButton = RadioButton
+  static RadioButtonGroup = RadioButtonGroup
   static Separator = Separator
   static Text = Text
   static Bold = Bold

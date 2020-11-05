@@ -4,6 +4,8 @@ import cx from 'classnames'
 
 import Base from '../Base.core'
 
+import './Label.scss'
+
 /**
  * The HTML `label` element represents a caption for an item in a user interface.
  */

@@ -4,6 +4,8 @@ import cx from 'classnames'
 
 import Base from '../Base.core'
 
+import './Code.scss'
+
 /**
  * HTML `code` element DOC styled
  */

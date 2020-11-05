@@ -25,5 +25,6 @@ const Template = props => <Heading {...props} />
 export const Default = Template.bind({})
 
 Default.args = {
-  children: 'Heading'
+  children: 'Heading',
+  elementType: 'h1'
 }

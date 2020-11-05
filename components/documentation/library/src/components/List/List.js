@@ -4,6 +4,8 @@ import cx from 'classnames'
 
 import Base from '../Base.core'
 
+import './List.scss'
+
 /**
  * The HTML `ol` element represents an ordered list of items — typically rendered as a numbered list.
  */

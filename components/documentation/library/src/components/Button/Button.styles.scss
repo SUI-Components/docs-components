@@ -1,4 +1,4 @@
-.sui-studio-doc-button {
+.sui-studio-doc.sui-studio-doc-button {
   background-color: var(--c-sui-studio-doc-neutral10);
   border: none;
   color: var(--c-sui-studio-doc-neutral0);
@@ -9,6 +9,9 @@
   &.sui-studio-doc-mode-dark {
     background-color: var(--c-sui-studio-doc-neutral0);
     color: var(--c-sui-studio-doc-neutral10);
+    & * {
+      color: var(--c-sui-studio-doc-neutral10);
+    }
   }
   &:hover {
     background-color: var(--c-sui-studio-doc-primary);
@@ -20,19 +23,31 @@
     background-color: transparent;
     box-shadow: inset 0 0 0 1px var(--c-sui-studio-doc-neutral10);
     color: var(--c-sui-studio-doc-neutral10);
+    & * {
+      color: var(--c-sui-studio-doc-neutral10);
+    }
     &.sui-studio-doc-mode-dark {
       background-color: transparent;
       box-shadow: inset 0 0 0 1px var(--c-sui-studio-doc-neutral0);
       color: var(--c-sui-studio-doc-neutral0);
+      & * {
+        color: var(--c-sui-studio-doc-neutral0);
+      }
     }
     &:hover {
       background-color: transparent;
       box-shadow: inset 0 0 0 1px var(--c-sui-studio-doc-primary);
       color: var(--c-sui-studio-doc-primary);
+      & * {
+        color: var(--c-sui-studio-doc-primary);
+      }
     }
     &:active {
-      color: var(--c-sui-studio-doc-primary-light);
       box-shadow: inset 0 0 0 1px var(--c-sui-studio-doc-primary-light);
+      color: var(--c-sui-studio-doc-primary-light);
+      & * {
+        color: var(--c-sui-studio-doc-primary-light);
+      }
     }
   }
   &:focus {
@@ -61,6 +76,9 @@
       border-color: var(--c-sui-studio-doc-neutral10);
       border-width: 1px 0 1px 1px;
       color: var(--c-sui-studio-doc-neutral10);
+      & * {
+        color: var(--c-sui-studio-doc-neutral10);
+      }
       &.sui-studio-doc-mode-dark {
         background-color: transparent;
         border-color: var(--c-sui-studio-doc-neutral0);
@@ -70,10 +88,13 @@
         border-width: 1px;
       }
       &:hover {
-        color: var(--c-sui-studio-doc-primary);
         background-color: transparent;
         border-color: var(--c-sui-studio-doc-primary);
         border-width: 1px;
+        color: var(--c-sui-studio-doc-primary);
+        & * {
+          color: var(--c-sui-studio-doc-primary);
+        }
         & + .sui-studio-doc-button {
           border-width: 1px 0 1px 0;
           &:last-child {
@@ -82,8 +103,11 @@
         }
       }
       &:active {
-        color: var(--c-sui-studio-doc-primary-light);
         border-color: var(--c-sui-studio-doc-primary-light);
+        color: var(--c-sui-studio-doc-primary-light);
+        & * {
+          color: var(--c-sui-studio-doc-primary-light);
+        }
       }
     }
   }

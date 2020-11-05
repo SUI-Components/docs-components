@@ -1,16 +1,10 @@
 # DevIcon
-> version undefined
-
 DevIcon DOC styled
 
 ## Installation
 `npm install @s-ui/documentation-library`
 
 ## Usage
-```scss
-// include DevIcon SASS module
-@include '@s-ui/documentation-library/lib/components/DevIcon/DevIcon.scss'
-```
 
 ```js
 // import DevIcon DOC component
@@ -18,11 +12,6 @@ import { DevIcon } from '@s-ui/documentation-library/lib/components/DevIcon/DevI
 ```
 
 or
-
-```scss
-// include all SASS modules
-@include '@s-ui/documentation-library/lib/index.scss'
-```
 
 ```js
 // import all DOC components you need

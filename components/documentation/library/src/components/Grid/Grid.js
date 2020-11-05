@@ -4,6 +4,8 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import {withConditionalProvider} from '../Base.core'
 
+import './Grid.scss'
+
 const range = (length, start = 0) => {
   return Array.from({length}, (_, i) => start + i)
 }

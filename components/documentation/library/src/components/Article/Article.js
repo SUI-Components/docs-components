@@ -4,10 +4,13 @@ import cx from 'classnames'
 
 import Box from '../Box/Box'
 
+import './Article.scss'
+import {withConditionalProvider} from '../Base.core'
+
 /**
  * HTML `article` element DOC styled
  */
-const Article = ({
+let Article = ({
   children,
   className,
   elementType = 'article',
@@ -35,6 +38,8 @@ const Article = ({
     </Box>
   )
 }
+
+Article = withConditionalProvider(Article)
 
 Article.displayName = 'Article'
 Article.propTypes = {}

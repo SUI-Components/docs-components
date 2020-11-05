@@ -5,6 +5,8 @@ import cx from 'classnames'
 
 import Base from '../Base.core'
 
+import './Avatar.scss'
+
 const SHAPES = {
   CIRCLE: 'circled',
   SQUARE: 'squared',

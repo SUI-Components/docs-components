@@ -16,6 +16,8 @@ export {Label} from './components/Label/Label.js'
 export {UnorderedList, OrderedList, ListItem} from './components/List/List.js'
 export {Paragraph} from './components/Paragraph/Paragraph.js'
 export {Quote} from './components/Quote/Quote.js'
+export {Radio, RadioGroup} from './components/Radio/Radio.js'
+export {RadioButton, RadioButtonGroup} from './components/Radio/RadioButton.js'
 export {Separator} from './components/Separator/Separator.js'
 export {
   Text,

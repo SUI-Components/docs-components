@@ -4,6 +4,8 @@ import cx from 'classnames'
 
 import Base from '../Base.core'
 
+import './Paragraph.scss'
+
 /**
  * The HTML `p` element represents a paragraph.
  * */

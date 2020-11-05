@@ -1,16 +1,10 @@
 # Avatar
-> version undefined
-
 Component used to represent people or objects DOC styled
 
 ## Installation
 `npm install @s-ui/documentation-library`
 
 ## Usage
-```scss
-// include Avatar SASS module
-@include '@s-ui/documentation-library/lib/components/Avatar/Avatar.scss'
-```
 
 ```js
 // import Avatar DOC component
@@ -18,11 +12,6 @@ import { Avatar } from '@s-ui/documentation-library/lib/components/Avatar/Avatar
 ```
 
 or
-
-```scss
-// include all SASS modules
-@include '@s-ui/documentation-library/lib/index.scss'
-```
 
 ```js
 // import all DOC components you need
