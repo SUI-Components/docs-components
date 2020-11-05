@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.4.0 (2020-11-05)
+
+
+### Features
+
+* add radio components ([4ac73d7](https://github.com/SUI-Components/docs-components/commit/4ac73d70640ff61de5515d5c3eff0a3112964f6b))
+
+
+
 # 1.3.0 (2020-10-30)
 
 
