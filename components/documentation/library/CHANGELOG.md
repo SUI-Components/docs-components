@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.5.0 (2020-11-05)
+
+
+### Bug Fixes
+
+* documentation ([db9ece4](https://github.com/SUI-Components/docs-components/commit/db9ece4ea3949101398f2ccbe6fcc39f8b523975))
+
+
+
 # 1.4.0 (2020-11-05)
 
 
