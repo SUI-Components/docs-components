@@ -42,7 +42,7 @@
     "core-js": "3",
     "fs-extra": "8.1.0",
     "globby": "10.0.1",
-    "husky": "4.2.5",
+    "husky": "4.3.0",
     "validate-commit-msg": "2.12.2",
     "walker": "1.0.7"
   },

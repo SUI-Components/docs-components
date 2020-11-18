@@ -98,6 +98,7 @@
           color: var(--c-sui-studio-doc-neutral0);
         }
         &.sui-studio-doc-radio-button--checked {
+          background-color: transparent;
           color: var(--c-sui-studio-doc-primary);
           & * {
             color: var(--c-sui-studio-doc-primary);
