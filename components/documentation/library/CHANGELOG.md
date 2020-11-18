@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.7.0 (2020-11-18)
+
+
+### Bug Fixes
+
+* radio button group selected outlined darkmode style ([4a72160](https://github.com/SUI-Components/docs-components/commit/4a721604fd38a61a405de524b89029c3349884ce))
+
+
+
 # 1.6.0 (2020-11-05)
 
 
