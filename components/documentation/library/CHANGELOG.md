@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.8.0 (2020-11-20)
+
+
+### Bug Fixes
+
+* fix the global colors look and feel applied to the body ([d540411](https://github.com/SUI-Components/docs-components/commit/d54041109745462572245b69809cd7ac7d838cf7))
+
+
+
 # 1.7.0 (2020-11-18)
 
 
