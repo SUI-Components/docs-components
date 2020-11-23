@@ -1,6 +1,5 @@
 import React from 'react'
 import * as Components from './main'
-import {RadioButtonGroup} from './main'
 
 const {
   Anchor,
@@ -32,8 +31,8 @@ const {
   // Radio,
   // RadioGroup,
   RadioButton,
-  // RadioButtonGroup,
-  // Separator,
+  RadioButtonGroup,
+  Separator,
   Text,
   Bold,
   Strong,
@@ -159,10 +158,10 @@ export default props => {
           </Cell>
         </Grid>
       </Cell>
-      {/* <Cell> */}
-      {/*  <Separator /> */}
-      {/*  <Separator>Separator</Separator> */}
-      {/* </Cell> */}
+      <Cell>
+        <Separator />
+        <Separator>Separator</Separator>
+      </Cell>
       <Cell>
         <Input defaultValue="Input" fullWidth />
       </Cell>
