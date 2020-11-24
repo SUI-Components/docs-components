@@ -7,6 +7,11 @@
   border: solid 1px var(--c-sui-studio-doc-neutral2);
   border-radius: 4px;
   padding: 0 2px;
+  &.sui-studio-doc-mode-light {
+    background: var(--c-sui-studio-doc-neutral0);
+    border: solid 1px var(--c-sui-studio-doc-neutral2);
+    color: var(--c-sui-studio-doc-secondary5);
+  }
   &.sui-studio-doc-mode-dark {
     background: var(--c-sui-studio-doc-neutral-darkest);
     border: solid 1px var(--c-sui-studio-doc-neutral);
