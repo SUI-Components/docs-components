@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.11.0 (2020-11-24)
+
+
+### Bug Fixes
+
+* code styles for light mode ([52e0c8c](https://github.com/SUI-Components/docs-components/commit/52e0c8c8316a471a11623416f52c23ded781ce0d))
+
+
+
 # 1.10.0 (2020-11-24)
 
 
