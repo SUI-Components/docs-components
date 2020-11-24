@@ -40,13 +40,13 @@ const Radio = ({
     }
   }, [contextValue, setCheckedState, value])
   const onClickHandler = event => {
-    const value = event.target.value
-    if (setContextState && event.target.checked === true) {
-      setContextState({value})
-    }
+    const {value, name} = event.target
     setCheckedState(!checkedState)
+    if (setContextState && event.target.checked === true) {
+      setContextState({value: checkedState ? undefined : value, name})
+    }
     if (onClick) {
-      onClick(event, event.target.checked === true ? value : undefined)
+      onClick(event, checkedState ? undefined : value)
     }
   }
   return (
