@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.10.0 (2020-11-24)
+
+
+### Bug Fixes
+
+* radio buttons unselect handling event ([b286303](https://github.com/SUI-Components/docs-components/commit/b2863038f2cf889c7b2fb988a1748c46ea89b34d))
+
+
+
 # 1.9.0 (2020-11-23)
 
 
