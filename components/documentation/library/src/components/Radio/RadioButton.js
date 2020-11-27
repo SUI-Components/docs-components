@@ -28,6 +28,9 @@ const RadioButton = ({
   const [checkedState, setCheckedState] = useState(
     defaultChecked === undefined ? defaultChecked : checked
   )
+  if (checked !== checkedState) {
+    setCheckedState(checked)
+  }
   useEffect(() => {
     if (contextValue === undefined) {
       return
