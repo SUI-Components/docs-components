@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.13.0 (2020-11-27)
+
+
+### Bug Fixes
+
+* infinile loop ([28663a3](https://github.com/SUI-Components/docs-components/commit/28663a31bd4d072b880c65ca124828e8e2408f8f))
+
+
+
 # 1.12.0 (2020-11-27)
 
 
