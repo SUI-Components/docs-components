@@ -23,4 +23,5 @@ import { RadioGroup } from '@s-ui/documentation-library'
 | Name | Description | Values  | Default | Required |
 | ---: |:---:| ---:| ---: |:---: |
 | onClick |  | | |  [ ]  |
+| checked |  | | |  [ ]  |
 | elementType | undefined | | |  [ ]  |

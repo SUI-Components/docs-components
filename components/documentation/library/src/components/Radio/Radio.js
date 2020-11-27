@@ -136,7 +136,11 @@ RadioGroup.propTypes = {
   /*
    * on click callback event (event, value)
    */
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  /*
+   * Value given
+   */
+  checked: PropTypes.bool
 }
 RadioGroup.defaultProps = {}
 

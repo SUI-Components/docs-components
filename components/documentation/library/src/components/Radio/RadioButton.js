@@ -110,7 +110,11 @@ RadioButtonGroup.propTypes = {
   /*
    * form field name
    */
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  /*
+   * Value given
+   */
+  checked: PropTypes.bool
 }
 RadioButtonGroup.defaultProps = {}
 
