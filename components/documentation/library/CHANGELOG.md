@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.12.0 (2020-11-27)
+
+
+### Bug Fixes
+
+* radio controled status toogle ([7542835](https://github.com/SUI-Components/docs-components/commit/75428351c49b9a20408bda11ed7c1acd5a11abc0))
+
+
+### Features
+
+* radio fix ([4c10d07](https://github.com/SUI-Components/docs-components/commit/4c10d07ecfe552f3d9de17d1c87cc87c8546b99f))
+
+
+
 # 1.11.0 (2020-11-24)
 
 
