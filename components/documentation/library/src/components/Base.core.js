@@ -46,7 +46,6 @@ export const DocumentationProvider = ({
   mode = MODES.LIGHT,
   ...otherProps
 }) => {
-  debugger
   return (
     <Context.Provider value={{mode, ...otherProps}}>
       {Children.map(children, child => {
@@ -125,7 +124,6 @@ export const transformProps = (
 const BaseCore = forwardRef(
   ({children, elementType, ...otherProps}, forwardedRef) => {
     const contextProps = useContext(Context) || {}
-    debugger
     const ownProps = Object.assign(
       {},
       transformProps({...contextProps, ...otherProps})
