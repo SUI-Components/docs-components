@@ -1,5 +1,12 @@
 /* eslint react/prop-types: 0 */
-import React, {createElement, Fragment, useContext} from 'react'
+import React, {
+  createElement,
+  Fragment,
+  useContext,
+  forwardRef,
+  Children,
+  cloneElement
+} from 'react'
 import cx from 'classnames'
 
 import Context from '../context/Mode'
@@ -34,47 +41,35 @@ export const TEXT_DECORATION = {
   LINETHROUGH: 'line-through'
 }
 
-export const ConditionalProvider = ({
+export const DocumentationProvider = ({
   children,
-  content,
-  elementType,
-  needsProvider,
-  mode,
+  mode = MODES.LIGHT,
   ...otherProps
 }) => {
-  const contextProps = useContext(Context) || {}
-  if (!needsProvider) {
-    return children({
-      ...otherProps,
-      ...contextProps,
-      elementType,
-      children: content
-    })
-  }
+  debugger
   return (
-    <Context.Provider value={{mode}}>
-      {children({...otherProps, mode, elementType, children: content})}
+    <Context.Provider value={{mode, ...otherProps}}>
+      {Children.map(children, child => {
+        cloneElement(child, {mode})
+        return child
+      })}
     </Context.Provider>
   )
 }
 
-export const withConditionalProvider = Component => {
-  const Base = ({...otherProps} = {}) => {
-    const needsProvider =
-      Object.keys(otherProps).includes('mode') &&
-      Object.entries(MODES)
-        .flat()
-        .includes(otherProps.mode)
+export const withDocumentationProvider = Component => {
+  const Base = forwardRef(({mode, ...otherProps} = {}, forwardedRef) => {
+    const contextProps = useContext(Context) || {}
     return (
-      <ConditionalProvider
-        {...otherProps}
-        content={otherProps.children}
-        needsProvider={needsProvider}
-      >
-        {Component}
-      </ConditionalProvider>
+      <DocumentationProvider mode={mode || contextProps.mode}>
+        <Component
+          ref={forwardedRef}
+          mode={mode || contextProps.mode || MODES.LIGHT}
+          {...otherProps}
+        />
+      </DocumentationProvider>
     )
-  }
+  })
   return Base
 }
 
@@ -127,29 +122,40 @@ export const transformProps = (
   }
 }
 
-const BaseCore = ({children, elementType, ...otherProps}) => {
-  const ownProps = Object.assign({}, transformProps(otherProps))
-  let ownElementType = elementType
-  if (
-    (elementType === null ||
-      elementType === undefined ||
-      elementType === Fragment) &&
-    ownProps.className === transformProps().className
-  ) {
-    delete ownProps.className
-    return <Fragment {...ownProps}>children</Fragment>
-  } else if (
-    ownProps.className !== transformProps().className &&
-    (elementType === undefined ||
-      elementType === null ||
-      elementType === Fragment)
-  ) {
-    ownElementType = 'span'
+const BaseCore = forwardRef(
+  ({children, elementType, ...otherProps}, forwardedRef) => {
+    const contextProps = useContext(Context) || {}
+    debugger
+    const ownProps = Object.assign(
+      {},
+      transformProps({...contextProps, ...otherProps})
+    )
+    let ownElementType = elementType
+    if (
+      (elementType === null ||
+        elementType === undefined ||
+        elementType === Fragment) &&
+      ownProps.className === transformProps().className
+    ) {
+      delete ownProps.className
+      return <Fragment {...ownProps}>children</Fragment>
+    } else if (
+      ownProps.className !== transformProps().className &&
+      (elementType === undefined ||
+        elementType === null ||
+        elementType === Fragment)
+    ) {
+      ownElementType = 'span'
+    }
+    return createElement(
+      ownElementType,
+      {...ownProps, ref: forwardedRef},
+      children
+    )
   }
-  return createElement(ownElementType, {...ownProps}, children)
-}
+)
 
-const BaseConditionalProvided = withConditionalProvider(BaseCore)
+const BaseConditionalProvided = withDocumentationProvider(BaseCore)
 BaseConditionalProvided.displayName = 'Base'
 BaseConditionalProvided.propTypes = {}
 BaseConditionalProvided.defaultProps = {}

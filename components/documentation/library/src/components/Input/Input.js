@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {forwardRef} from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
@@ -9,15 +9,18 @@ import './Input.scss'
 /**
  * HTML `input` element DOC styled
  */
-const Input = ({children, className, elementType = 'input', ...props}) => {
-  return (
-    <Base
-      {...props}
-      elementType={elementType}
-      className={cx('sui-studio-doc-input', className)}
-    />
-  )
-}
+const Input = forwardRef(
+  ({children, className, elementType = 'input', ...props}, forwardedRef) => {
+    return (
+      <Base
+        {...props}
+        elementType={elementType}
+        className={cx('sui-studio-doc-input', className)}
+        ref={forwardedRef}
+      />
+    )
+  }
+)
 
 Input.displayName = 'Input'
 Input.propTypes = {

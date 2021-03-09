@@ -11,6 +11,7 @@ import {BoxIcon} from './components/Icon/BoxIcon'
 import {BootstrapIcon} from './components/Icon/BootstrapIcon'
 import {DevIcon} from './components/Icon/DevIcon'
 import {FeatherIcon} from './components/Icon/FeatherIcon'
+import {FlatColorIcon} from './components/Icon/FlatColorIcon'
 import {Input} from './components/Input/Input.js'
 import {Label} from './components/Label/Label.js'
 import {UnorderedList, OrderedList, ListItem} from './components/List/List.js'
@@ -53,6 +54,7 @@ export default class DocumentationLibrary {
   static BootstrapIcon = BootstrapIcon
   static DevIcon = DevIcon
   static FeatherIcon = FeatherIcon
+  static FlatColorIcon = FlatColorIcon
   static Input = Input
   static Label = Label
   static UnorderedList = UnorderedList

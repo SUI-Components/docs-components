@@ -1,5 +1,5 @@
 /* eslint react/prop-types: 0 */
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import ExtraPropTypes from 'react-extra-prop-types'
 import cx from 'classnames'
@@ -12,48 +12,54 @@ import './BootstrapIcon.scss'
 /**
  * Bootstrap icon DOC styled
  */
-const BootstrapIcon = ({
-  className,
-  icon,
-  color,
-  children,
-  elementType = 'span',
-  fullWidth = true,
-  title,
-  size,
-  ...props
-}) => {
-  const [IconElement, setIconElement] = useState(() => () => null)
-  useEffect(() => {
-    if (icon) {
-      import('react-icons/bs')
-        .then(module => module[icon])
-        .then(Element => {
-          setIconElement(() => Element || IconElement)
-        })
-    }
-  }, [icon, IconElement])
-  return (
-    <Base
-      {...props}
-      elementType={elementType}
-      className={cx(
-        'sui-studio-doc-icon sui-studio-doc-icon-bootstrap',
-        className
-      )}
-      fullWidth={fullWidth}
-    >
-      <IconContext.Provider
-        value={{
-          color: color,
-          style: {verticalAlign: 'middle', textAlign: 'center'}
-        }}
+const BootstrapIcon = forwardRef(
+  (
+    {
+      className,
+      icon,
+      color,
+      children,
+      elementType = 'span',
+      fullWidth = true,
+      title,
+      size,
+      ...props
+    },
+    forwardedRef
+  ) => {
+    const [IconElement, setIconElement] = useState(() => () => null)
+    useEffect(() => {
+      if (icon) {
+        import('react-icons/bs')
+          .then(module => module[icon])
+          .then(Element => {
+            setIconElement(() => Element || IconElement)
+          })
+      }
+    }, [icon, IconElement])
+    return (
+      <Base
+        {...props}
+        elementType={elementType}
+        className={cx(
+          'sui-studio-doc-icon sui-studio-doc-icon-bootstrap',
+          className
+        )}
+        fullWidth={fullWidth}
+        ref={forwardedRef}
       >
-        <IconElement size={size} title={title} />
-      </IconContext.Provider>
-    </Base>
-  )
-}
+        <IconContext.Provider
+          value={{
+            color: color,
+            style: {verticalAlign: 'middle', textAlign: 'center'}
+          }}
+        >
+          <IconElement size={size} title={title} />
+        </IconContext.Provider>
+      </Base>
+    )
+  }
+)
 BootstrapIcon.displayName = 'BootstrapIcon'
 BootstrapIcon.propTypes = {
   /**

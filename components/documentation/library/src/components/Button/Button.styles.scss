@@ -6,6 +6,7 @@
   padding: 6.5px 12px;
   border-radius: 4px;
   font-weight: var(--fw-sui-studio-doc-medium);
+  white-space: nowrap;
   &.sui-studio-doc-mode-light {
     background-color: var(--c-sui-studio-doc-neutral10);
     color: var(--c-sui-studio-doc-neutral0);

@@ -1,5 +1,5 @@
 /* eslint react/prop-types: 0 */
-import React, {useState, useEffect, useContext} from 'react'
+import React, {useState, useEffect, useContext, forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -14,63 +14,70 @@ export const RadioGroupContext = React.createContext()
  * The `<input type="radio">` defines a radio button.
  * RadioButton buttons are normally presented in radio groups (a collection of radio buttons describing a set of related options). Only one radio button in a group can be selected at the same time.
  */
-const Radio = ({
-  label,
-  className,
-  defaultChecked = false,
-  onClick,
-  onChange = () => null,
-  checked,
-  value,
-  name,
-  ...props
-}) => {
-  const radioGroupContext = useContext(RadioGroupContext) || {}
-  const contextValue = radioGroupContext.value
-  const setContextState = radioGroupContext.setContextState
-  const [checkedState, setCheckedState] = useState(
-    defaultChecked === undefined ? defaultChecked : checked
-  )
-  useEffect(() => {
-    setCheckedState(checked)
-  }, [setCheckedState, checked])
-  useEffect(() => {
-    if (contextValue === undefined) {
-      return
+const Radio = forwardRef(
+  (
+    {
+      label,
+      className,
+      elementType = 'input',
+      type = 'radio',
+      defaultChecked = false,
+      onClick,
+      onChange = () => null,
+      checked,
+      value,
+      name,
+      ...props
+    },
+    forwardedRef
+  ) => {
+    const radioGroupContext = useContext(RadioGroupContext) || {}
+    const contextValue = radioGroupContext.value
+    const setContextState = radioGroupContext.setContextState
+    const [checkedState, setCheckedState] = useState(
+      defaultChecked === undefined ? defaultChecked : checked
+    )
+    useEffect(() => {
+      setCheckedState(checked)
+    }, [setCheckedState, checked])
+    useEffect(() => {
+      if (contextValue === undefined) {
+        return
+      }
+      if (value) {
+        setCheckedState(contextValue === value.toString())
+      }
+    }, [contextValue, setCheckedState, value])
+    const onClickHandler = event => {
+      const {value, name} = event.target
+      setCheckedState(!checkedState)
+      if (setContextState && event.target.checked === true) {
+        setContextState({value: checkedState ? undefined : value, name})
+      }
+      if (onClick) {
+        onClick(event, checkedState ? undefined : value)
+      }
     }
-    if (value) {
-      setCheckedState(contextValue === value.toString())
-    }
-  }, [contextValue, setCheckedState, value])
-  const onClickHandler = event => {
-    const {value, name} = event.target
-    setCheckedState(!checkedState)
-    if (setContextState && event.target.checked === true) {
-      setContextState({value: checkedState ? undefined : value, name})
-    }
-    if (onClick) {
-      onClick(event, checkedState ? undefined : value)
-    }
+    return (
+      <>
+        <Base
+          {...props}
+          elementType={elementType}
+          type={type}
+          className={cx('sui-studio-doc-radio', className)}
+          onClick={onClickHandler}
+          onChange={onChange}
+          checked={checkedState}
+          aria-label={label || value}
+          value={value}
+          name={name || radioGroupContext.name}
+          ref={forwardedRef}
+        />
+        {(label || value) && <Text elementType="label">{label || value}</Text>}
+      </>
+    )
   }
-  return (
-    <>
-      <Base
-        {...props}
-        elementType="input"
-        type="radio"
-        className={cx('sui-studio-doc-radio', className)}
-        onClick={onClickHandler}
-        onChange={onChange}
-        checked={checkedState}
-        aria-label={label || value}
-        value={value}
-        name={name || radioGroupContext.name}
-      />
-      {(label || value) && <Text elementType="label">{label || value}</Text>}
-    </>
-  )
-}
-
+)
 Radio.displayName = 'Radio'
 Radio.propTypes = {
   /**
@@ -88,7 +95,7 @@ Radio.propTypes = {
   /**
    * element value result
    */
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
 Radio.defaultProps = {
   checked: false
@@ -97,40 +104,45 @@ Radio.defaultProps = {
 /**
  * Radio options element wrapper
  */
-const RadioGroup = ({
-  className,
-  children,
-  elementType = 'div',
-  value,
-  label,
-  name,
-  onChange,
-  ...props
-}) => {
-  const [context, setContext] = useState({name, label, value})
-  const setContextState = (newArguments = {}) => {
-    const newContext = {...context, ...newArguments}
-    if (onChange) {
-      onChange(newContext.value)
+const RadioGroup = forwardRef(
+  (
+    {
+      className,
+      children,
+      elementType = 'div',
+      value,
+      label,
+      name,
+      onChange,
+      ...props
+    },
+    forwardedRef
+  ) => {
+    const [context, setContext] = useState({name, label, value})
+    const setContextState = (newArguments = {}) => {
+      const newContext = {...context, ...newArguments}
+      if (onChange) {
+        onChange(newContext.value)
+      }
+      setContext(newContext)
     }
-    setContext(newContext)
+    return (
+      <Base
+        {...props}
+        className={cx('sui-studio-doc-radio-group', className)}
+        elementType={elementType}
+        role="radiogroup"
+        aria-labelledby={label}
+        name={name}
+        ref={forwardedRef}
+      >
+        <RadioGroupContext.Provider value={{...context, setContextState}}>
+          {children}
+        </RadioGroupContext.Provider>
+      </Base>
+    )
   }
-  return (
-    <Base
-      {...props}
-      className={cx('sui-studio-doc-radio-group', className)}
-      elementType={elementType}
-      role="radiogroup"
-      aria-labelledby={label}
-      name={name}
-    >
-      <RadioGroupContext.Provider value={{...context, setContextState}}>
-        {children}
-      </RadioGroupContext.Provider>
-    </Base>
-  )
-}
-
+)
 RadioGroup.displayName = 'RadioGroup'
 RadioGroup.propTypes = {
   /*

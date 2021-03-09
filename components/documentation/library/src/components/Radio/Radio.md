@@ -26,5 +26,7 @@ import { Radio } from '@s-ui/documentation-library'
 | checked | controlled active checkbox value | | |  [ ]  |
 | defaultChecked | initial checkbox value | | |  [ ]  |
 | onClick |  | | |  [ ]  |
-| value | element value result | | |  [x]  |
+| value | element value result | | |  [ ]  |
+| elementType | undefined | | |  [ ]  |
+| type | undefined | | |  [ ]  |
 | onChange | undefined | | |  [ ]  |

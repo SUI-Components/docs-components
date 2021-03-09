@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem default should have proper displayName attribute 1`] = `"ListItem"`;

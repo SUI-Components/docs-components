@@ -1,7 +1,7 @@
 /* global location */
 /* eslint react/prop-types: 0 */
 
-import React from 'react'
+import React, {forwardRef} from 'react'
 import cx from 'classnames'
 
 import Base from '../Base.core'
@@ -35,20 +35,23 @@ export const isExternalURL = url => {
 /**
  * HTML `a` element DOC styled
  */
-const Anchor = ({children, className, href = '#', target, ...props}) => {
-  const isExternalLink = isExternalURL(href)
-  return (
-    <Base
-      elementType="a"
-      className={cx('sui-studio-doc-anchor', className)}
-      {...props}
-      target={target || (isExternalLink ? '_blank' : undefined)}
-      href={href}
-    >
-      {children}
-    </Base>
-  )
-}
+const Anchor = forwardRef(
+  ({children, className, href = '#', target, ...props}, forwardedRef) => {
+    const isExternalLink = isExternalURL(href)
+    return (
+      <Base
+        ref={forwardedRef}
+        elementType="a"
+        className={cx('sui-studio-doc-anchor', className)}
+        {...props}
+        target={target || (isExternalLink ? '_blank' : undefined)}
+        href={href}
+      >
+        {children}
+      </Base>
+    )
+  }
+)
 Anchor.displayName = 'Anchor'
 Anchor.propTypes = {}
 Anchor.defaultProps = {}

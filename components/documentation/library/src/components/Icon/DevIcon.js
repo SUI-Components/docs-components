@@ -1,5 +1,5 @@
 /* eslint react/prop-types: 0 */
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import ExtraPropTypes from 'react-extra-prop-types'
 import cx from 'classnames'
@@ -12,7 +12,7 @@ import './DevIcon.scss'
 /**
  * DevIcon DOC styled
  */
-const DevIcon = ({
+const DevIcon = forwardRef(({
   className,
   icon,
   color,
@@ -22,7 +22,7 @@ const DevIcon = ({
   title,
   size,
   ...props
-}) => {
+}, forwardedRef) => {
   const [IconElement, setIconElement] = useState(() => () => null)
   useEffect(() => {
     if (icon) {
@@ -42,6 +42,7 @@ const DevIcon = ({
         className
       )}
       fullWidth={fullWidth}
+      ref={forwardedRef}
     >
       <IconContext.Provider
         value={{
@@ -53,7 +54,7 @@ const DevIcon = ({
       </IconContext.Provider>
     </Base>
   )
-}
+})
 DevIcon.displayName = 'DevIcon'
 DevIcon.propTypes = {
   /**

@@ -5,7 +5,7 @@ exports[`Base default should assign default element in class is given 1`] = `
   id="test-container"
 >
   <span
-    class="sui-studio-doc test-classname"
+    class="sui-studio-doc sui-studio-doc-mode-light test-classname"
   >
     children
   </span>
@@ -17,7 +17,7 @@ exports[`Base default should assign default elementType if fontWeight is given 1
   id="test-container"
 >
   <span
-    class="sui-studio-doc sui-studio-doc-fw-bold"
+    class="sui-studio-doc sui-studio-doc-fw-bold sui-studio-doc-mode-light"
   >
     children
   </span>
@@ -29,7 +29,7 @@ exports[`Base default should assign default elementType if it is deprecated 1`] 
   id="test-container"
 >
   <span
-    class="sui-studio-doc sui-studio-doc-deprecated"
+    class="sui-studio-doc sui-studio-doc-deprecated sui-studio-doc-mode-light"
   >
     children
   </span>
@@ -41,7 +41,7 @@ exports[`Base default should assign default elementType if textDecoration is giv
   id="test-container"
 >
   <span
-    class="sui-studio-doc sui-studio-doc-td-underline"
+    class="sui-studio-doc sui-studio-doc-td-underline sui-studio-doc-mode-light"
   >
     children
   </span>
@@ -53,18 +53,22 @@ exports[`Base default should assign default elementType if textTransform is give
   id="test-container"
 >
   <span
-    class="sui-studio-doc sui-studio-doc-tt-capitalize"
+    class="sui-studio-doc sui-studio-doc-tt-capitalize sui-studio-doc-mode-light"
   >
     children
   </span>
 </div>
 `;
 
-exports[`Base default should display children only 1`] = `
+exports[`Base default should display wrapping default children only 1`] = `
 <div
   id="test-container"
 >
-  children
+  <span
+    class="sui-studio-doc sui-studio-doc-mode-light"
+  >
+    children
+  </span>
 </div>
 `;
 
@@ -75,7 +79,7 @@ exports[`Base default should render elementType if an element is given 1`] = `
   id="test-container"
 >
   <element-type
-    classname="sui-studio-doc"
+    classname="sui-studio-doc sui-studio-doc-mode-light"
   >
     children
   </element-type>

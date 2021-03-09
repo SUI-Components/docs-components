@@ -1,5 +1,5 @@
 /* eslint react/prop-types: 0 */
-import React from 'react'
+import React, {forwardRef} from 'react'
 import cx from 'classnames'
 
 import Base from '../Base.core'
@@ -9,26 +9,26 @@ import './Button.scss'
 /**
  * HTML `button` element DOC styled. Triggers an operation on click.
  */
-const Button = ({
-  children,
-  elementType = 'button',
-  outline,
-  className,
-  ...props
-}) => (
-  <Base
-    {...props}
-    elementType={elementType}
-    className={cx(
-      'sui-studio-doc-button',
-      {
-        'sui-studio-doc-button-outline': outline
-      },
-      className
-    )}
-  >
-    {children}
-  </Base>
+const Button = forwardRef(
+  (
+    {children, elementType = 'button', outline, className, ...props},
+    forwardedRef
+  ) => (
+    <Base
+      {...props}
+      elementType={elementType}
+      className={cx(
+        'sui-studio-doc-button',
+        {
+          'sui-studio-doc-button-outline': outline
+        },
+        className
+      )}
+      ref={forwardedRef}
+    >
+      {children}
+    </Base>
+  )
 )
 Button.displayName = 'Button'
 Button.propTypes = {}
@@ -37,26 +37,26 @@ Button.defaultProps = {}
 /**
  * HTML wrapper to group multiple `button` HTML elements DOC styled.
  */
-const ButtonGroup = ({
-  className,
-  children,
-  elementType = 'div',
-  outline,
-  ...props
-}) => (
-  <Base
-    {...props}
-    elementType={elementType}
-    className={cx(
-      'sui-studio-doc-button-group',
-      {
-        'sui-studio-doc-button-group-outline': outline
-      },
-      className
-    )}
-  >
-    {children}
-  </Base>
+const ButtonGroup = forwardRef(
+  (
+    {className, children, elementType = 'div', outline, ...props},
+    forwardedRef
+  ) => (
+    <Base
+      {...props}
+      elementType={elementType}
+      className={cx(
+        'sui-studio-doc-button-group',
+        {
+          'sui-studio-doc-button-group-outline': outline
+        },
+        className
+      )}
+      ref={forwardedRef}
+    >
+      {children}
+    </Base>
+  )
 )
 
 ButtonGroup.displayName = 'ButtonGroup'

@@ -65,6 +65,9 @@
 > #### [**FeatherIcon**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/FeatherIcon/FeatherIcon.md)
 > Feather Icon DOC styled
 
+> #### [**FlatColorIcon**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/FlatColorIcon/FlatColorIcon.md)
+> Flat Color Icon DOC styled
+
 > #### [**Input**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/Input/Input.md)
 > HTML `input` element DOC styled
 

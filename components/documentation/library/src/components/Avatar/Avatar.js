@@ -1,5 +1,5 @@
 /* eslint react/prop-types: 0 */
-import React from 'react'
+import React, {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -24,54 +24,60 @@ const SIZES = {
 /**
  * Component used to represent people or objects DOC styled
  */
-const Avatar = ({
-  className,
-  size,
-  shape = SHAPES.CIRCLE,
-  elementType = 'img',
-  grayScale = undefined,
-  sepia = undefined,
-  saturate = undefined,
-  hueRotate = undefined,
-  invert = undefined,
-  opacity = undefined,
-  brightness = undefined,
-  contrast = undefined,
-  blur = undefined,
-  ...props
-}) => {
-  const filter = Object.entries({
-    ...(grayScale !== undefined && {grayscale: `${grayScale}`}),
-    ...(sepia !== undefined && {sepia: `${sepia}`}),
-    ...(saturate !== undefined && {saturate: `${saturate}`}),
-    ...(hueRotate !== undefined && {'hue-rotate': `${hueRotate}deg`}),
-    ...(invert !== undefined && {invert: `${invert}`}),
-    ...(opacity !== undefined && {opacity: `${opacity}`}),
-    ...(brightness !== undefined && {brightness: `${brightness}`}),
-    ...(contrast !== undefined && {contrast: `${contrast}`}),
-    ...(blur !== undefined && {blur: `${blur}px`})
-  })
-    .map(([key, value]) => `${key}(${value})`)
-    .join(' ')
-  return (
-    <Base
-      {...props}
-      style={{
-        ...(filter && {filter: filter}),
-        ...props.style
-      }}
-      elementType={elementType}
-      className={cx(
-        'sui-studio-doc-avatar',
-        {
-          [`sui-studio-doc-avatar-shape-${shape}`]: shape,
-          [`sui-studio-doc-avatar-size-${size}`]: size
-        },
-        className
-      )}
-    />
-  )
-}
+const Avatar = forwardRef(
+  (
+    {
+      className,
+      size,
+      shape = SHAPES.CIRCLE,
+      elementType = 'img',
+      grayScale = undefined,
+      sepia = undefined,
+      saturate = undefined,
+      hueRotate = undefined,
+      invert = undefined,
+      opacity = undefined,
+      brightness = undefined,
+      contrast = undefined,
+      blur = undefined,
+      ...props
+    },
+    forwardedRef
+  ) => {
+    const filter = Object.entries({
+      ...(grayScale !== undefined && {grayscale: `${grayScale}`}),
+      ...(sepia !== undefined && {sepia: `${sepia}`}),
+      ...(saturate !== undefined && {saturate: `${saturate}`}),
+      ...(hueRotate !== undefined && {'hue-rotate': `${hueRotate}deg`}),
+      ...(invert !== undefined && {invert: `${invert}`}),
+      ...(opacity !== undefined && {opacity: `${opacity}`}),
+      ...(brightness !== undefined && {brightness: `${brightness}`}),
+      ...(contrast !== undefined && {contrast: `${contrast}`}),
+      ...(blur !== undefined && {blur: `${blur}px`})
+    })
+      .map(([key, value]) => `${key}(${value})`)
+      .join(' ')
+    return (
+      <Base
+        {...props}
+        style={{
+          ...(filter && {filter: filter}),
+          ...props.style
+        }}
+        elementType={elementType}
+        className={cx(
+          'sui-studio-doc-avatar',
+          {
+            [`sui-studio-doc-avatar-shape-${shape}`]: shape,
+            [`sui-studio-doc-avatar-size-${size}`]: size
+          },
+          className
+        )}
+        ref={forwardedRef}
+      />
+    )
+  }
+)
 
 Avatar.propTypes = {
   /**

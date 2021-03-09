@@ -1,5 +1,5 @@
 /* global expect */
-import React from 'react'
+import React, {createRef} from 'react'
 import ReactDOM from 'react-dom'
 
 import {Article} from './Article'
@@ -58,6 +58,38 @@ describe('Article', () => {
       expect(component.displayName).toBeString()
       expect(component.displayName).not.toHaveLength(0)
       expect(component.displayName).toMatchSnapshot()
+    })
+
+    describe('forwardRef', () => {
+      test('should have reference', () => {
+        // Given
+        const props = {}
+        const ref = createRef()
+
+        // When
+        const component = <Component {...props} ref={ref} />
+        const div = document.createElement('div')
+        ReactDOM.render(component, div)
+
+        // Then
+        expect(ref.current).not.toBe(undefined)
+        expect(ref.current.nodeName).toBe('ARTICLE')
+      })
+
+      test('should have defined elementType reference', () => {
+        // Given
+        const props = {elementType: 'span'}
+        const ref = createRef()
+
+        // When
+        const component = <Component {...props} ref={ref} />
+        const div = document.createElement('div')
+        ReactDOM.render(component, div)
+
+        // Then
+        expect(ref.current).not.toBe(undefined)
+        expect(ref.current.nodeName).toBe('SPAN')
+      })
     })
   })
 })

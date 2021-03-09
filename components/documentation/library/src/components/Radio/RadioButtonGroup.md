@@ -22,6 +22,6 @@ import { RadioButtonGroup } from '@s-ui/documentation-library'
 
 | Name | Description | Values  | Default | Required |
 | ---: |:---:| ---:| ---: |:---: |
-| name |  | | |  [x]  |
+| name |  | | |  [ ]  |
 | checked |  | | |  [ ]  |
 | elementType | undefined | | |  [ ]  |

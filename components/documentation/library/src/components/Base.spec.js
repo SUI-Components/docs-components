@@ -60,18 +60,18 @@ describe('Base', () => {
       expect(component.displayName).toMatchSnapshot()
     })
 
-    test('should display children only', () => {
+    test('should display wrapping default children only', () => {
       // Given
       const props = {
         children: 'children'
       }
 
       // When
-      const {container, getByText} = setup(props)
+      const {container, getByText, debug} = setup(props)
       const element = getByText(props.children)
 
       // Then
-      expect(element.localName).toBe('div')
+      expect(element.localName).toBe('span')
       expect(element.innerHTML).toBeString()
       expect(element.innerHTML).toBe(props.children)
       expect(container).toMatchSnapshot()

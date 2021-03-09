@@ -46,9 +46,9 @@ const {
   Superscript
 } = Components
 
-export default props => {
+export default ({mode}) => {
   return (
-    <Grid cols={1} gutter={[5, 10]}>
+    <Grid mode={mode} cols={1} gutter={[5, 10]}>
       <Cell>
         <H1>Heading one</H1>
       </Cell>
