@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.15.0 (2021-03-09)
+
+
+### Bug Fixes
+
+* rm debuggers ([81f883b](https://github.com/SUI-Components/docs-components/commit/81f883b44143f9a3ddf9bbe69ff8854c847fafcb))
+
+
+
 # 1.14.0 (2021-03-09)
 
 
