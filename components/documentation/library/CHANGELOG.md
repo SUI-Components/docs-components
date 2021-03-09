@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.14.0 (2021-03-09)
+
+
+### Features
+
+* add references to all library ([9afe06e](https://github.com/SUI-Components/docs-components/commit/9afe06e97c2eae289c322b50a428c35ca56fdd47))
+
+
+
 # 1.13.0 (2020-11-27)
 
 
