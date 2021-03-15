@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.16.0 (2021-03-15)
+
+
+### Bug Fixes
+
+* infinite looping ([3150e62](https://github.com/SUI-Components/docs-components/commit/3150e6218dbacc7796e42b39f31365129b2aec7b))
+
+
+
 # 1.15.0 (2021-03-09)
 
 
