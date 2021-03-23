@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.17.0 (2021-03-23)
+
+
+### Bug Fixes
+
+* add context observer to rhe radioGroup useEffect ([990c0bc](https://github.com/SUI-Components/docs-components/commit/990c0bceaed4d82fe3df9ae394ebba65b7bef2f9))
+* icon color styles rule and radio infinite looping ([7737302](https://github.com/SUI-Components/docs-components/commit/7737302091f06522dbf2e544d1cc13d5d7839757))
+
+
+
 # 1.16.0 (2021-03-15)
 
 
