@@ -127,7 +127,7 @@ const RadioGroup = forwardRef(
       setContext(newContext)
     }
     useEffect(() => {
-      setContextState({value})
+      if (value !== context.value) setContextState({value})
     }, [setContextState, value])
     return (
       <Base
