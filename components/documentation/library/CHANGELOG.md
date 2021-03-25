@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.18.0 (2021-03-25)
+
+
+### Bug Fixes
+
+* infinite looping and value changing in the Radio components ([2cb4588](https://github.com/SUI-Components/docs-components/commit/2cb4588c57f375b1c1cbb782a440f30e4407c0bc))
+
+
+
 # 1.17.0 (2021-03-23)
 
 
