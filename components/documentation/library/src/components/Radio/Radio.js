@@ -1,10 +1,11 @@
 /* eslint react/prop-types: 0 */
-import React, {useState, useEffect, useContext, forwardRef} from 'react'
+import React, {useEffect, useContext, forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 import Base from '../Base.core'
 import Text from '../Text/Text'
+import useControlledState from '../../hooks/useControlledState/useControlledState'
 
 import './Radio.scss'
 
@@ -34,25 +35,23 @@ const Radio = forwardRef(
     const radioGroupContext = useContext(RadioGroupContext) || {}
     const contextValue = radioGroupContext.value
     const setContextState = radioGroupContext.setContextState
-    const [checkedState, setCheckedState] = useState(
-      defaultChecked === undefined ? defaultChecked : checked
+    const [checkedState, setCheckedState] = useControlledState(
+      checked,
+      defaultChecked
     )
-    useEffect(() => {
-      setCheckedState(checked)
-    }, [setCheckedState, checked])
     useEffect(() => {
       if (contextValue === undefined) {
         return
       }
-      if (value) {
-        setCheckedState(contextValue === value.toString())
+      if (value !== undefined) {
+        setCheckedState(contextValue === value)
       }
     }, [contextValue, setCheckedState, value])
     const onClickHandler = event => {
-      const {value, name} = event.target
+      const {name} = event.target
       setCheckedState(!checkedState)
       if (setContextState && event.target.checked === true) {
-        setContextState({value: checkedState ? undefined : value, name})
+        setContextState(event, {value: checkedState ? undefined : value, name})
       }
       if (onClick) {
         onClick(event, checkedState ? undefined : value)
@@ -97,9 +96,7 @@ Radio.propTypes = {
    */
   value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
-Radio.defaultProps = {
-  checked: false
-}
+Radio.defaultProps = {}
 
 /**
  * Radio options element wrapper
@@ -110,6 +107,7 @@ const RadioGroup = forwardRef(
       className,
       children,
       elementType = 'div',
+      defaultValue,
       value,
       label,
       name,
@@ -118,18 +116,14 @@ const RadioGroup = forwardRef(
     },
     forwardedRef
   ) => {
-    const [context, setContext] = useState({name, label, value})
-    const setContextState = (newArguments = {}) => {
-      const newContext = {...context, ...newArguments}
+    const [valueState, setValueState] = useControlledState(value, defaultValue)
+    const setContextState = (event, newArguments = {}) => {
+      const newContext = {name, label, value: valueState, ...newArguments}
       if (onChange) {
-        onChange(newContext.value)
+        onChange(event, newContext.value)
       }
-      setContext(newContext)
+      setValueState(newContext.value)
     }
-    const contextValue = context?.value
-    useEffect(() => {
-      if (value !== contextValue) setContextState({value})
-    }, [setContextState, value, contextValue])
     return (
       <Base
         {...props}
@@ -140,7 +134,9 @@ const RadioGroup = forwardRef(
         name={name}
         ref={forwardedRef}
       >
-        <RadioGroupContext.Provider value={{...context, setContextState}}>
+        <RadioGroupContext.Provider
+          value={{name, label, value: valueState, setContextState}}
+        >
           {children}
         </RadioGroupContext.Provider>
       </Base>

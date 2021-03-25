@@ -22,8 +22,8 @@ Base.args = {
   defaultChecked: false,
   label: 'label',
   name: 'name',
-  onChange: value => {
-    console.log({value})
+  onChange: (event, value) => {
+    console.log({event, value})
   }
 }
 Base.argTypes = {}

@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Text default should have proper displayName attribute 1`] = `"Text"`;
+exports[`components Text default should have proper displayName attribute 1`] = `"Text"`;

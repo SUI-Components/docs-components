@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Bold default should have proper displayName attribute 1`] = `"Bold"`;
+exports[`components Bold default should have proper displayName attribute 1`] = `"Bold"`;

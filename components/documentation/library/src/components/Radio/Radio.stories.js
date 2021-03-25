@@ -8,7 +8,9 @@ export default {
   component: Radio
 }
 
-const Template = ({...args}) => <Radio {...args} />
+const Template = ({...args}) => {
+  return <Radio {...args} />
+}
 
 export const Base = Template.bind({})
 

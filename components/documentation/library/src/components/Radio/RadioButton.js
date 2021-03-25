@@ -1,5 +1,5 @@
 /* eslint react/prop-types: 0 */
-import React, {useState, useEffect, useContext, forwardRef} from 'react'
+import React, {useEffect, useContext, forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
@@ -7,6 +7,7 @@ import {Radio, RadioGroup, RadioGroupContext} from './Radio'
 import {Button, ButtonGroup} from '../Button/Button'
 
 import './Radio.scss'
+import useControlledState from '../../hooks/useControlledState/useControlledState'
 
 /**
  * The `<input type="radio">` defines a radio button styled like a button.
@@ -29,24 +30,22 @@ const RadioButton = forwardRef(
     const radioGroupContext = useContext(RadioGroupContext) || {}
     const contextValue = radioGroupContext.value
     const setContextState = radioGroupContext.setContextState
-    const [checkedState, setCheckedState] = useState(
-      defaultChecked === undefined ? defaultChecked : checked
+    const [checkedState, setCheckedState] = useControlledState(
+      checked,
+      defaultChecked
     )
-    useEffect(() => {
-      setCheckedState(checked)
-    }, [setCheckedState, checked])
     useEffect(() => {
       if (contextValue === undefined) {
         return
       }
-      if (value) {
-        setCheckedState(contextValue === value.toString())
+      if (value !== undefined) {
+        setCheckedState(contextValue === value)
       }
     }, [contextValue, setCheckedState, value])
     const onClickHandler = event => {
       setCheckedState(!checkedState)
       if (setContextState) {
-        setContextState({value: checkedState ? undefined : value})
+        setContextState(event, {value: checkedState ? undefined : value})
       }
       if (onClick) {
         onClick(event, checkedState ? undefined : value)
@@ -66,7 +65,6 @@ const RadioButton = forwardRef(
         <Radio
           className="sui-studio-doc-radio-button__radio"
           onChange={onChange}
-          defaultChecked={defaultChecked}
           checked={checkedState}
           label={label}
           value={value}
@@ -83,19 +81,32 @@ RadioButton.propTypes = {
    */
   onClick: PropTypes.func
 }
-RadioButton.defaultProps = {
-  checked: false
-}
+RadioButton.defaultProps = {}
+
 /**
  * Radio button options element wrapper
  */
 const RadioButtonGroup = forwardRef(
   (
-    {className, children, elementType = 'div', onChange, name, value, ...props},
+    {
+      className,
+      children,
+      elementType = 'div',
+      onChange,
+      name,
+      defaultValue,
+      value,
+      ...props
+    },
     forwardedRef
   ) => {
     return (
-      <RadioGroup onChange={onChange} name={name} value={value}>
+      <RadioGroup
+        onChange={onChange}
+        name={name}
+        defaultValue={defaultValue}
+        value={value}
+      >
         <ButtonGroup
           {...props}
           className={cx('sui-studio-doc-radio-button', className)}
@@ -115,9 +126,13 @@ RadioButtonGroup.propTypes = {
    */
   name: PropTypes.string,
   /*
-   * Value given
+   * Value selected
    */
-  checked: PropTypes.bool
+  value: PropTypes.string,
+  /*
+   * initial value selected
+   */
+  defaultValue: PropTypes.string
 }
 RadioButtonGroup.defaultProps = {}
 

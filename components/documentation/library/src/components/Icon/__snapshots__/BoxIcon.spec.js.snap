@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BoxIcon default should have proper displayName attribute 1`] = `"BoxIcon"`;
+exports[`components BoxIcon default should have proper displayName attribute 1`] = `"BoxIcon"`;
