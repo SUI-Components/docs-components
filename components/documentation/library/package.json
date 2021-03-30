@@ -15,7 +15,7 @@
   "dependencies": {
     "@s-ui/component-dependencies": "1",
     "react-extra-prop-types": "0",
-    "react-icons": "3"
+    "react-icons": "4"
   },
   "repository": {
     "type": "git",

@@ -12,7 +12,7 @@
     "lint": "npm run lint:js && npm run lint:sass",
     "lint:js": "sui-lint js",
     "lint:sass": "sui-lint sass",
-    "phoenix": "sui-mono phoenix",
+    "phoenix": "npx @s-ui/mono@2 run 'rm -rf ./node_modules' && rm -rf ./node_modules && npm install --legacy-peer-deps",
     "release": "sui-studio release",
     "start": "sui-studio start",
     "storybook:start": "start-storybook -p 6006 -c components/documentation/library/.storybook/",
