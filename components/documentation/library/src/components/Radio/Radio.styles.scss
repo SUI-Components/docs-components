@@ -1,14 +1,19 @@
-.sui-studio-doc-radio {
+.sui-studio-doc.sui-studio-doc-radio {
   appearance: none;
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 0.8em;
+  height: 0.8em;
   padding: 1px;
   background-clip: content-box;
   border: 1px solid var(--c-sui-studio-doc-neutral);
   background-color: transparent;
   border-radius: 50%;
   margin: 0;
+  position: relative;
+  font-size: inherit;
+  + .sui-studio-doc.sui-studio-doc-text {
+    margin-left: 0.5ch;
+  }
   &:focus {
     outline: 0;
   }
@@ -21,11 +26,33 @@
   }
 }
 
+*
+  + .sui-studio-doc.sui-studio-doc-radio
+  + .sui-studio-doc.sui-studio-doc-text:not(:last-child),
+* + .sui-studio-doc.sui-studio-doc-radio-group:not(.sui-studio-doc-full-width) {
+  margin-right: 0.5ch;
+}
+
+*:not(.sui-studio-doc.sui-studio-doc-text)
+  ~ .sui-studio-doc.sui-studio-doc-radio,
+* ~ .sui-studio-doc.sui-studio-doc-radio-group:not(.sui-studio-doc-full-width) {
+  margin-left: 0.5ch;
+}
+
+.sui-studio-doc.sui-studio-doc-radio-group {
+  display: inline-block;
+  &.sui-studio-doc-full-width {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .sui-studio-doc.sui-studio-doc-radio-button {
   &__radio {
     display: none;
-    + .sui-studio-doc-text {
+    + .sui-studio-doc.sui-studio-doc-text {
       font-weight: var(--fw-sui-studio-doc-medium);
+      margin-left: 0px;
     }
   }
   &--checked {
@@ -70,7 +97,7 @@
   }
 }
 
-.sui-studio-doc-button-group {
+.sui-studio-doc.sui-studio-doc-button-group {
   .sui-studio-doc-radio-button {
     &.sui-studio-doc-radio-button--checked {
       background-color: var(--c-sui-studio-doc-primary);

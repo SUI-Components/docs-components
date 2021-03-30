@@ -96,6 +96,7 @@ const RadioButtonGroup = forwardRef(
       name,
       defaultValue,
       value,
+      fullWidth,
       ...props
     },
     forwardedRef
@@ -106,11 +107,13 @@ const RadioButtonGroup = forwardRef(
         name={name}
         defaultValue={defaultValue}
         value={value}
+        fullWidth={fullWidth}
       >
         <ButtonGroup
           {...props}
           className={cx('sui-studio-doc-radio-button', className)}
           elementType={elementType}
+          fullWidth={fullWidth}
           ref={forwardedRef}
         >
           {children}
