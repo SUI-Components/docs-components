@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.19.0 (2021-03-30)
+
+
+### Features
+
+* update react-icons ([3c6d1ca](https://github.com/SUI-Components/docs-components/commit/3c6d1ca61c9434e54c70c93a649bab8865c410d7))
+
+
+
 # 1.18.0 (2021-03-25)
 
 
