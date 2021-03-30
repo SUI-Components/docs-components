@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.20.0 (2021-03-30)
+
+
+### Bug Fixes
+
+* radio styles ([f923bd0](https://github.com/SUI-Components/docs-components/commit/f923bd075a921156f37439d41a4d81a5bbc1fdbc))
+
+
+
 # 1.19.0 (2021-03-30)
 
 
