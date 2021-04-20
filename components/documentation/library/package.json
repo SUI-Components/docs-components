@@ -15,7 +15,7 @@
   "dependencies": {
     "@s-ui/component-dependencies": "1",
     "color": "3",
-    "isomorphic-fetch": "^3.0.0",
+    "isomorphic-fetch": "3",
     "lodash.debounce": "4",
     "react-extra-prop-types": "0",
     "react-icons": "4",
