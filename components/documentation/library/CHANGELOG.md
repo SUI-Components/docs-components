@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+# 1.21.0 (2021-04-20)
+
+
+### Bug Fixes
+
+* documentation only ([b8a6df6](https://github.com/SUI-Components/docs-components/commit/b8a6df6f9029e0cdefb637cb1c7979ee94d57621))
+* isomorphic fetch lib ([c93b05d](https://github.com/SUI-Components/docs-components/commit/c93b05d240cd90b4c43102bc5030788965d8f324))
+
+
+### Features
+
+* add Color components ([8e6ed96](https://github.com/SUI-Components/docs-components/commit/8e6ed96df33e9c9b2ea4beb4612a0cb6a94e6b06))
+
+
+
 # 1.20.0 (2021-03-30)
 
 
