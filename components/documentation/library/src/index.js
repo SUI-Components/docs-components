@@ -4,6 +4,13 @@ import {Avatar} from './components/Avatar/Avatar.js'
 import {Box} from './components/Box/Box.js'
 import {Button, ButtonGroup} from './components/Button/Button.js'
 import {Code} from './components/Code/Code.js'
+import {
+  ColorContext,
+  ColorContextProvider,
+  ColorContextConsumer
+} from './components/Color/ColorContext.core'
+import {BackgroundColorConsumer} from './components/Color/BackgroundColorConsumer'
+import {Pantone} from './components/Color/Pantone'
 import {Grid, Cell} from './components/Grid/Grid.js'
 import {Heading, H1, H2, H3, H4} from './components/Heading/Heading.js'
 import {AntDesignIcon} from './components/Icon/AntDesignIcon'
@@ -50,6 +57,11 @@ export default class DocumentationLibrary {
   static H3 = H3
   static H4 = H4
   static AntDesignIcon = AntDesignIcon
+  static ColorContext = ColorContext
+  static ColorContextProvider = ColorContextProvider
+  static ColorContextConsumer = ColorContextConsumer
+  static BackgroundColorConsumer = BackgroundColorConsumer
+  static Pantone = Pantone
   static BoxIcon = BoxIcon
   static BootstrapIcon = BootstrapIcon
   static DevIcon = DevIcon

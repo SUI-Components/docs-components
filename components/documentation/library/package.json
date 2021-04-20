@@ -14,8 +14,13 @@
   },
   "dependencies": {
     "@s-ui/component-dependencies": "1",
+    "color": "3",
+    "isomorphic-fetch": "3",
+    "lodash.debounce": "4",
     "react-extra-prop-types": "0",
-    "react-icons": "4"
+    "react-icons": "4",
+    "react-is": "17",
+    "react-use": "17"
   },
   "repository": {
     "type": "git",

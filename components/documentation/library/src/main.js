@@ -4,6 +4,13 @@ export {Avatar} from './components/Avatar/Avatar.js'
 export {Box} from './components/Box/Box.js'
 export {Button, ButtonGroup} from './components/Button/Button.js'
 export {Code} from './components/Code/Code.js'
+export {BackgroundColorConsumer} from './components/Color/BackgroundColorConsumer'
+export {
+  ColorContext,
+  ColorContextProvider,
+  ColorContextConsumer
+} from './components/Color/ColorContext.core'
+export {Pantone} from './components/Color/Pantone'
 export {Grid, Cell} from './components/Grid/Grid.js'
 export {Heading, H1, H2, H3, H4} from './components/Heading/Heading.js'
 export {AntDesignIcon} from './components/Icon/AntDesignIcon'

@@ -1,4 +1,6 @@
-.sui-studio-doc {
+@import './core';
+
+#{$PREFIX} {
   color: currentColor;
   font-family: var(--ff-sui-studio-doc-sans-serif);
   font-weight: var(--fw-sui-studio-doc-lighter);
@@ -9,7 +11,7 @@
       font-weight: var(--fw-sui-studio-doc-bold);
     }
   }
-  &.sui-studio-doc {
+  &#{$PREFIX} {
     &-tt {
       &-uppercase {
         text-transform: var(--tt-sui-studio-doc-uppercase);
@@ -73,6 +75,9 @@
     }
     &-full-width {
       width: 100%;
+    }
+    &-full-height {
+      height: 100%;
     }
     &-mode {
       &-light {
