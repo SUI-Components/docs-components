@@ -1,0 +1,139 @@
+@import '../core';
+
+$base-class: '#{$PREFIX}-pantone';
+
+$m-pantone: 0.25ch;
+$p-pantone-frame: 0.5 * $m-pantone;
+$size-pantone-frame-tilt: 0;
+
+#{$PREFIX}#{$base-class} {
+  height: 3ch;
+  width: 3ch;
+  display: inline-table;
+  vertical-align: middle;
+  text-align: center;
+  padding: $m-pantone;
+  box-sizing: border-box;
+  /* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  + *:where(:not(#{$PREFIX}#{$base-class})) {
+    margin-left: 0.5ch;
+  }
+
+  #{$base-class}-frame-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: content-box;
+  }
+  #{$PREFIX}#{$base-class}-frame {
+    width: calc(100% - #{2 * $p-pantone-frame + $m-pantone});
+    height: calc(100% - #{2 * $p-pantone-frame + $m-pantone});
+    padding: $p-pantone-frame;
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    border-color: transparent;
+    border-style: solid;
+    border-width: $p-pantone-frame;
+    position: relative;
+    transition: border-color 0.5s ease-out;
+    #{$base-class}-frame-tilt {
+      position: absolute;
+      transition: 0.5s ease;
+      &:nth-of-type(1) {
+        top: 0;
+        left: 0;
+        width: $size-pantone-frame-tilt;
+        height: $p-pantone-frame;
+        background-color: red; // var(--c-sui-studio-doc-neutral0);
+        margin-top: -$p-pantone-frame;
+        margin-left: -$p-pantone-frame;
+      }
+      &:nth-of-type(3) {
+        bottom: 0;
+        right: 0;
+        width: $p-pantone-frame;
+        height: $size-pantone-frame-tilt;
+        background-color: red; // var(--c-sui-studio-doc-neutral0);
+        margin-bottom: -$p-pantone-frame;
+        margin-right: -$p-pantone-frame;
+      }
+      &:nth-of-type(2) {
+        top: 0;
+        left: 0;
+        width: $p-pantone-frame;
+        height: $size-pantone-frame-tilt;
+        background-color: red; // var(--c-sui-studio-doc-neutral0);
+        margin-top: -$p-pantone-frame;
+        margin-left: -$p-pantone-frame;
+      }
+      &:nth-of-type(4) {
+        bottom: 0;
+        right: 0;
+        width: $size-pantone-frame-tilt;
+        height: $p-pantone-frame;
+        background-color: red; // var(--c-sui-studio-doc-neutral0);
+        margin-bottom: -$p-pantone-frame;
+        margin-right: -$p-pantone-frame;
+      }
+    }
+  }
+  &:hover #{$PREFIX}#{$base-class}-frame {
+    transition: border-color 0.5s ease-in;
+    border-color: var(--c-sui-studio-doc-neutral0);
+    #{$base-class}-frame-tilt {
+      &:nth-of-type(1) {
+        width: calc(100% + #{2 * $p-pantone-frame});
+        transform: translateX(100%);
+      }
+      &:nth-of-type(2) {
+        height: calc(100% + #{2 * $p-pantone-frame});
+        transform: translateY(100%);
+      }
+      &:nth-of-type(3) {
+        height: calc(100% + #{2 * $p-pantone-frame});
+        transform: translateY(-100%);
+      }
+      &:nth-of-type(4) {
+        width: calc(100% + #{2 * $p-pantone-frame});
+        transform: translateX(-100%);
+      }
+    }
+  }
+  #{$PREFIX}#{$base-class}-legend,
+  #{$PREFIX}#{$base-class}-token-name,
+  #{$PREFIX}#{$base-class}-name {
+    font-size: 0.1em;
+    max-height: 2ch;
+    max-width: 100%;
+    display: inline-grid;
+    &-isLight {
+      color: var(--c-sui-studio-doc-neutral10);
+    }
+    &-isDark {
+      color: var(--c-sui-studio-doc-neutral0);
+    }
+  }
+  #{$base-class}-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    user-select: none;
+  }
+  #{$PREFIX}#{$base-class}-name {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  &#{$PREFIX}-full-width {
+    width: 100%;
+  }
+  &#{$PREFIX}-full-height {
+    height: 100%;
+  }
+}
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+*:where(:not(#{$PREFIX}#{$base-class})) + #{$PREFIX}#{$base-class} {
+  margin-left: 0.5ch;
+}
