@@ -16,7 +16,7 @@
   ) {
     @for $i from 0 through 10 {
       $step: $lightning-range-max - $lightning-range-min;
-      $factor: $lightning-range-min + ($i * $step) / 10;
+      $factor: $lightning-range-min + ($i * $step) * 0.1;
       $lightning: 100% - $factor;
       --c-sui-studio-doc-#{$name}#{$i}: hsl(
         #{$color-hue-code},
