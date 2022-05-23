@@ -1,19 +1,27 @@
-# Change Log
+# CHANGELOG
 
-All notable changes to this project will be documented in this file.
+# 1.23.0 (2022-05-23)
+
+
+### Bug Fixes
+
+* **components/documentation/library:** fix deps ([d9d1255](https://github.com/SUI-Components/docs-components/commit/d9d1255e732cfe4abed289f7b5792bac5018d2d9))
+* **components/documentation/library:** sass remove div char '/' ([3b8e690](https://github.com/SUI-Components/docs-components/commit/3b8e690dab6b721938b8e3902119f9528d7a8495))
+
+
 
 # 1.21.0 (2021-04-20)
 
 
 ### Bug Fixes
 
-* documentation only ([b8a6df6](https://github.com/SUI-Components/docs-components/commit/b8a6df6f9029e0cdefb637cb1c7979ee94d57621))
-* isomorphic fetch lib ([c93b05d](https://github.com/SUI-Components/docs-components/commit/c93b05d240cd90b4c43102bc5030788965d8f324))
+* **documentation/library:** isomorphic fetch lib ([c93b05d](https://github.com/SUI-Components/docs-components/commit/c93b05d240cd90b4c43102bc5030788965d8f324))
+* **META:** documentation only ([b8a6df6](https://github.com/SUI-Components/docs-components/commit/b8a6df6f9029e0cdefb637cb1c7979ee94d57621))
 
 
 ### Features
 
-* add Color components ([8e6ed96](https://github.com/SUI-Components/docs-components/commit/8e6ed96df33e9c9b2ea4beb4612a0cb6a94e6b06))
+* **documentation/library:** add Color components ([8e6ed96](https://github.com/SUI-Components/docs-components/commit/8e6ed96df33e9c9b2ea4beb4612a0cb6a94e6b06))
 
 
 
@@ -22,7 +30,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* radio styles ([f923bd0](https://github.com/SUI-Components/docs-components/commit/f923bd075a921156f37439d41a4d81a5bbc1fdbc))
+* **documentation/library:** radio styles ([f923bd0](https://github.com/SUI-Components/docs-components/commit/f923bd075a921156f37439d41a4d81a5bbc1fdbc))
 
 
 
@@ -31,7 +39,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-* update react-icons ([3c6d1ca](https://github.com/SUI-Components/docs-components/commit/3c6d1ca61c9434e54c70c93a649bab8865c410d7))
+* **documentation/library:** update react-icons ([3c6d1ca](https://github.com/SUI-Components/docs-components/commit/3c6d1ca61c9434e54c70c93a649bab8865c410d7))
 
 
 
@@ -40,7 +48,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* infinite looping and value changing in the Radio components ([2cb4588](https://github.com/SUI-Components/docs-components/commit/2cb4588c57f375b1c1cbb782a440f30e4407c0bc))
+* **documentation/library:** infinite looping and value changing in the Radio components ([2cb4588](https://github.com/SUI-Components/docs-components/commit/2cb4588c57f375b1c1cbb782a440f30e4407c0bc))
 
 
 
@@ -49,8 +57,8 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* add context observer to rhe radioGroup useEffect ([990c0bc](https://github.com/SUI-Components/docs-components/commit/990c0bceaed4d82fe3df9ae394ebba65b7bef2f9))
-* icon color styles rule and radio infinite looping ([7737302](https://github.com/SUI-Components/docs-components/commit/7737302091f06522dbf2e544d1cc13d5d7839757))
+* **documentation/library:** add context observer to rhe radioGroup useEffect ([990c0bc](https://github.com/SUI-Components/docs-components/commit/990c0bceaed4d82fe3df9ae394ebba65b7bef2f9))
+* **documentation/library:** icon color styles rule and radio infinite looping ([7737302](https://github.com/SUI-Components/docs-components/commit/7737302091f06522dbf2e544d1cc13d5d7839757))
 
 
 
@@ -59,7 +67,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* infinite looping ([3150e62](https://github.com/SUI-Components/docs-components/commit/3150e6218dbacc7796e42b39f31365129b2aec7b))
+* **documentation/library:** infinite looping ([3150e62](https://github.com/SUI-Components/docs-components/commit/3150e6218dbacc7796e42b39f31365129b2aec7b))
 
 
 
@@ -68,7 +76,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* rm debuggers ([81f883b](https://github.com/SUI-Components/docs-components/commit/81f883b44143f9a3ddf9bbe69ff8854c847fafcb))
+* **documentation/library:** rm debuggers ([81f883b](https://github.com/SUI-Components/docs-components/commit/81f883b44143f9a3ddf9bbe69ff8854c847fafcb))
 
 
 
@@ -77,7 +85,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-* add references to all library ([9afe06e](https://github.com/SUI-Components/docs-components/commit/9afe06e97c2eae289c322b50a428c35ca56fdd47))
+* **documentation/library:** add references to all library ([9afe06e](https://github.com/SUI-Components/docs-components/commit/9afe06e97c2eae289c322b50a428c35ca56fdd47))
 
 
 
@@ -86,7 +94,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* infinile loop ([28663a3](https://github.com/SUI-Components/docs-components/commit/28663a31bd4d072b880c65ca124828e8e2408f8f))
+* **documentation/library:** infinile loop ([28663a3](https://github.com/SUI-Components/docs-components/commit/28663a31bd4d072b880c65ca124828e8e2408f8f))
 
 
 
@@ -95,12 +103,12 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* radio controled status toogle ([7542835](https://github.com/SUI-Components/docs-components/commit/75428351c49b9a20408bda11ed7c1acd5a11abc0))
+* **documentation/library:** radio controled status toogle ([7542835](https://github.com/SUI-Components/docs-components/commit/75428351c49b9a20408bda11ed7c1acd5a11abc0))
 
 
 ### Features
 
-* radio fix ([4c10d07](https://github.com/SUI-Components/docs-components/commit/4c10d07ecfe552f3d9de17d1c87cc87c8546b99f))
+* **documentation/library:** radio fix ([4c10d07](https://github.com/SUI-Components/docs-components/commit/4c10d07ecfe552f3d9de17d1c87cc87c8546b99f))
 
 
 
@@ -109,7 +117,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* code styles for light mode ([52e0c8c](https://github.com/SUI-Components/docs-components/commit/52e0c8c8316a471a11623416f52c23ded781ce0d))
+* **documentation/library:** code styles for light mode ([52e0c8c](https://github.com/SUI-Components/docs-components/commit/52e0c8c8316a471a11623416f52c23ded781ce0d))
 
 
 
@@ -118,7 +126,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* radio buttons unselect handling event ([b286303](https://github.com/SUI-Components/docs-components/commit/b2863038f2cf889c7b2fb988a1748c46ea89b34d))
+* **documentation/library:** radio buttons unselect handling event ([b286303](https://github.com/SUI-Components/docs-components/commit/b2863038f2cf889c7b2fb988a1748c46ea89b34d))
 
 
 
@@ -127,7 +135,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* styles ([4583ca3](https://github.com/SUI-Components/docs-components/commit/4583ca384fa0a20fceeae6c93ad8f33012508f35))
+* **documentation/library:** styles ([4583ca3](https://github.com/SUI-Components/docs-components/commit/4583ca384fa0a20fceeae6c93ad8f33012508f35))
 
 
 
@@ -136,7 +144,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* fix the global colors look and feel applied to the body ([d540411](https://github.com/SUI-Components/docs-components/commit/d54041109745462572245b69809cd7ac7d838cf7))
+* **documentation/library:** fix the global colors look and feel applied to the body ([d540411](https://github.com/SUI-Components/docs-components/commit/d54041109745462572245b69809cd7ac7d838cf7))
 
 
 
@@ -145,7 +153,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* radio button group selected outlined darkmode style ([4a72160](https://github.com/SUI-Components/docs-components/commit/4a721604fd38a61a405de524b89029c3349884ce))
+* **documentation/library:** radio button group selected outlined darkmode style ([4a72160](https://github.com/SUI-Components/docs-components/commit/4a721604fd38a61a405de524b89029c3349884ce))
 
 
 
@@ -154,7 +162,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-* radio handlers ([980c73e](https://github.com/SUI-Components/docs-components/commit/980c73e140f90588587bd66d7e364d6419301f67))
+* **documentation/library:** radio handlers ([980c73e](https://github.com/SUI-Components/docs-components/commit/980c73e140f90588587bd66d7e364d6419301f67))
 
 
 
@@ -163,7 +171,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* documentation ([db9ece4](https://github.com/SUI-Components/docs-components/commit/db9ece4ea3949101398f2ccbe6fcc39f8b523975))
+* **documentation/library:** documentation ([db9ece4](https://github.com/SUI-Components/docs-components/commit/db9ece4ea3949101398f2ccbe6fcc39f8b523975))
 
 
 
@@ -172,7 +180,7 @@ All notable changes to this project will be documented in this file.
 
 ### Features
 
-* add radio components ([4ac73d7](https://github.com/SUI-Components/docs-components/commit/4ac73d70640ff61de5515d5c3eff0a3112964f6b))
+* **documentation/library:** add radio components ([4ac73d7](https://github.com/SUI-Components/docs-components/commit/4ac73d70640ff61de5515d5c3eff0a3112964f6b))
 
 
 
@@ -181,8 +189,8 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* readme file ([9300f11](https://github.com/SUI-Components/docs-components/commit/9300f112c8f702829fc88a9ce074f013c351e519))
-* styles ([a8bf2e9](https://github.com/SUI-Components/docs-components/commit/a8bf2e97d5ffcbe09654370c9c77b130018c9ff0))
+* **documentation/library:** readme file ([9300f11](https://github.com/SUI-Components/docs-components/commit/9300f112c8f702829fc88a9ce074f013c351e519))
+* **documentation/library:** styles ([a8bf2e9](https://github.com/SUI-Components/docs-components/commit/a8bf2e97d5ffcbe09654370c9c77b130018c9ff0))
 
 
 
@@ -191,7 +199,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* style fixing ([326c616](https://github.com/SUI-Components/docs-components/commit/326c6168eb0f69f79b19447d07229a6a956f80c7))
+* **documentation/library:** style fixing ([326c616](https://github.com/SUI-Components/docs-components/commit/326c6168eb0f69f79b19447d07229a6a956f80c7))
 
 
 
@@ -200,7 +208,7 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* extra-prop-types library dependency ([2a71e30](https://github.com/SUI-Components/docs-components/commit/2a71e300619676d919af5877db7d9301f71afaf8))
+* **documentation/library:** extra-prop-types library dependency ([2a71e30](https://github.com/SUI-Components/docs-components/commit/2a71e300619676d919af5877db7d9301f71afaf8))
 
 
 
@@ -209,12 +217,12 @@ All notable changes to this project will be documented in this file.
 
 ### Bug Fixes
 
-* fix tests ([58a31b8](https://github.com/SUI-Components/docs-components/commit/58a31b829d37a123a38bce563cd094f35858f3a4))
+* **documentation/library:** fix tests ([58a31b8](https://github.com/SUI-Components/docs-components/commit/58a31b829d37a123a38bce563cd094f35858f3a4))
 
 
 ### Features
 
-* add library ([1216f87](https://github.com/SUI-Components/docs-components/commit/1216f8783ea63ee58431b783afb724558bf99515))
+* **documentation/library:** add library ([1216f87](https://github.com/SUI-Components/docs-components/commit/1216f8783ea63ee58431b783afb724558bf99515))
 
 
 
