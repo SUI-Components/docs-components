@@ -1,29 +1,33 @@
 .sui-studio-doc.sui-studio-doc-heading {
-  margin: 0.8em 0 0.2em 0;
+  margin: 0;
+  margin-bottom: 0.4rem;
   font-family: var(--ff-sui-studio-doc-sans-serif);
   @at-root {
     &-h1,
     h1#{&} {
       font-size: var(--fz-sui-studio-doc-xxl);
-      font-weight: var(--fw-sui-studio-doc-black);
+      font-weight: var(--fw-sui-studio-doc-regular);
+      border-bottom: 1px solid var(--c-sui-studio-doc-neutral1);
     }
 
     &-h2,
     h2#{&} {
-      font-size: var(--fz-sui-studio-doc-xl);
+      font-size: var(--fz-sui-studio-doc-xs);
       font-weight: var(--fw-sui-studio-doc-bold);
+      text-transform: var(--tt-sui-studio-doc-uppercase);
+      margin-top: 3.5rem;
     }
 
     &-h3,
     h3#{&} {
-      font-size: var(--fz-sui-studio-doc-lg);
-      font-weight: var(--fw-sui-studio-doc-bold);
+      font-size: var(--fz-sui-studio-doc-sm);
+      font-weight: var(--fw-sui-studio-doc-regular);
     }
 
     &-h4,
     h4#{&} {
-      font-size: var(--fz-sui-studio-doc-md);
-      font-weight: var(--fw-sui-studio-doc-bold);
+      font-size: var(--fz-sui-studio-doc-xs);
+      font-weight: var(--fw-sui-studio-doc-regular);
     }
   }
 }

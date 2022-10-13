@@ -1,5 +1,7 @@
 .sui-studio-doc.sui-studio-doc-quote {
-  font-size: var(--fz-sui-studio-doc-md);
+  font-size: var(--fz-sui-studio-doc-sm);
   font-weight: var(--fw-sui-studio-doc-regular);
-  font-style: var(--fs-sui-studio-doc-italic);
+  border-left: 0.25rem solid var(--c-sui-studio-doc-neutral1);
+  color: var(--c-sui-studio-doc-neutral4);
+  padding: 0 1rem;
 }

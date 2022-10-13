@@ -1,19 +1,16 @@
 .sui-studio-doc.sui-studio-doc-code {
-  color: var(--c-sui-studio-doc-secondary5);
-  font-size: 0.9em;
+  color: var(--c-sui-studio-doc-secondary);
+  font-size: 0.9rem;
   font-family: var(--ff-sui-studio-doc-monospace);
   font-weight: var(--fw-sui-studio-doc-regular);
-  background: var(--c-sui-studio-doc-neutral0);
-  border: solid 1px var(--c-sui-studio-doc-neutral2);
   border-radius: 4px;
-  padding: 0 2px;
+  padding: 2px 4px;
   &.sui-studio-doc-mode-light {
-    background: var(--c-sui-studio-doc-neutral0);
-    border: solid 1px var(--c-sui-studio-doc-neutral2);
-    color: var(--c-sui-studio-doc-secondary5);
+    color: var(--c-sui-studio-doc-secondary);
+    background: hsl(var(--c-palette-neutral-hue), 0%, 95%);
   }
   &.sui-studio-doc-mode-dark {
+    color: var(--c-sui-studio-doc-secondary);
     background: var(--c-sui-studio-doc-neutral-darkest);
-    border: solid 1px var(--c-sui-studio-doc-neutral);
   }
 }
