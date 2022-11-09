@@ -1,5 +1,8 @@
 import React from 'react'
-import * as Components from './main'
+import PropTypes from 'prop-types'
+
+import {MODES} from './components/Base.core.js'
+import * as Components from './main.js'
 
 const {
   Anchor,
@@ -46,7 +49,7 @@ const {
   Superscript
 } = Components
 
-export default ({mode}) => {
+const Demo = ({mode}) => {
   return (
     <Grid mode={mode} cols={1} gutter={[5, 10]}>
       <Cell>
@@ -211,3 +214,9 @@ export default ({mode}) => {
     </Grid>
   )
 }
+
+Demo.propTypes = {
+  mode: PropTypes.oneOf(Object.values(MODES))
+}
+
+export default Demo

@@ -12,49 +12,54 @@ import './DevIcon.scss'
 /**
  * DevIcon DOC styled
  */
-const DevIcon = forwardRef(({
-  className,
-  icon,
-  color,
-  children,
-  elementType = 'span',
-  fullWidth = true,
-  title,
-  size,
-  ...props
-}, forwardedRef) => {
-  const [IconElement, setIconElement] = useState(() => () => null)
-  useEffect(() => {
-    if (icon) {
-      import('react-icons/di')
-        .then(module => module[icon])
-        .then(Element => {
-          setIconElement(() => Element || IconElement)
-        })
-    }
-  }, [icon, IconElement])
-  return (
-    <Base
-      {...props}
-      elementType={elementType}
-      className={cx(
-        'sui-studio-doc-icon sui-studio-doc-icon-devicons',
-        className
-      )}
-      fullWidth={fullWidth}
-      ref={forwardedRef}
-    >
-      <IconContext.Provider
-        value={{
-          color: color,
-          style: {verticalAlign: 'middle', textAlign: 'center'}
-        }}
+const DevIcon = forwardRef(
+  (
+    {
+      className,
+      icon,
+      color,
+      children,
+      elementType = 'span',
+      fullWidth = true,
+      title,
+      size,
+      ...props
+    },
+    forwardedRef
+  ) => {
+    const [IconElement, setIconElement] = useState(() => () => null)
+    useEffect(() => {
+      if (icon) {
+        import('react-icons/di')
+          .then(module => module[icon])
+          .then(Element => {
+            setIconElement(() => Element || IconElement)
+          })
+      }
+    }, [icon, IconElement])
+    return (
+      <Base
+        {...props}
+        elementType={elementType}
+        className={cx(
+          'sui-studio-doc-icon sui-studio-doc-icon-devicons',
+          className
+        )}
+        fullWidth={fullWidth}
+        ref={forwardedRef}
       >
-        <IconElement size={size} title={title} />
-      </IconContext.Provider>
-    </Base>
-  )
-})
+        <IconContext.Provider
+          value={{
+            color: color,
+            style: {verticalAlign: 'middle', textAlign: 'center'}
+          }}
+        >
+          <IconElement size={size} title={title} />
+        </IconContext.Provider>
+      </Base>
+    )
+  }
+)
 DevIcon.displayName = 'DevIcon'
 DevIcon.propTypes = {
   /**

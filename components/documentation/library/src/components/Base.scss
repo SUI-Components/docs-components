@@ -3,7 +3,7 @@
 #{$PREFIX} {
   color: currentColor;
   font-family: var(--ff-sui-studio-doc-sans-serif);
-  font-weight: var(--fw-sui-studio-doc-lighter);
+  font-weight: var(--fw-sui-studio-doc-regular);
   line-height: 1.4;
   @at-root {
     b#{&},
@@ -81,10 +81,10 @@
     }
     &-mode {
       &-light {
-        color: var(--c-sui-studio-doc-neutral10);
+        color: var(--c-sui-studio-doc-neutral8);
       }
       &-dark {
-        color: var(--c-sui-studio-doc-neutral0);
+        color: var(--c-sui-studio-doc-neutral2);
       }
     }
   }

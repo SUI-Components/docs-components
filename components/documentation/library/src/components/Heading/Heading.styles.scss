@@ -5,25 +5,43 @@
     &-h1,
     h1#{&} {
       font-size: var(--fz-sui-studio-doc-xxl);
-      font-weight: var(--fw-sui-studio-doc-black);
+      font-weight: var(--fw-sui-studio-doc-regular);
+      margin-block-start: 0.8em;
+      margin-block-end: 0.2em;
     }
 
     &-h2,
     h2#{&} {
-      font-size: var(--fz-sui-studio-doc-xl);
+      font-size: var(--fz-sui-studio-doc-s);
       font-weight: var(--fw-sui-studio-doc-bold);
+      text-transform: uppercase;
+      margin-block-start: 0.8em;
+      margin-block-end: 0.2em;
     }
 
     &-h3,
     h3#{&} {
-      font-size: var(--fz-sui-studio-doc-lg);
-      font-weight: var(--fw-sui-studio-doc-bold);
+      font-size: var(--fz-sui-studio-doc-md);
+      font-weight: var(--fw-sui-studio-doc-regular);
+      margin-block-start: 0.8em;
+      margin-block-end: 0.2em;
     }
 
     &-h4,
     h4#{&} {
-      font-size: var(--fz-sui-studio-doc-md);
-      font-weight: var(--fw-sui-studio-doc-bold);
+      font-size: var(--fz-sui-studio-doc-sm);
+      font-weight: var(--fw-sui-studio-doc-medium);
+      text-transform: uppercase;
+      margin-block-start: 0.8em;
+      margin-block-end: 0.2em;
+    }
+  }
+  &.sui-studio-doc-mode {
+    &-light {
+      color: var(--c-sui-studio-doc-neutral10);
+    }
+    &-dark {
+      color: var(--c-sui-studio-doc-neutral0);
     }
   }
 }
