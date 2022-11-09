@@ -3,7 +3,7 @@ import React, {forwardRef} from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-import Base from '../Base.core'
+import Base from '../Base.core.js'
 
 import './Heading.scss'
 
@@ -12,7 +12,7 @@ export const HEADING_ELEMENT = {
     elementType: 'h1',
     className: (cn, mode) =>
       cx(
-        'sui-studio-doc-hseading',
+        'sui-studio-doc-heading',
         'sui-studio-doc-heading-h1',
         {
           [`sui-studio-doc-heading-mode-${mode}`]: mode

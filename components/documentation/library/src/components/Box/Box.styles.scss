@@ -1,24 +1,24 @@
 .sui-studio-doc-box {
-  padding: 1em 2em;
+  padding: 1em;
   border-radius: 4px;
-  background: var(--c-sui-studio-doc-neutral0);
   border-width: 1px;
   border-style: solid;
+  background: var(--c-sui-studio-doc-neutral0);
   border-color: var(--c-sui-studio-doc-neutral0);
   &.sui-studio-doc-box-mode-dark {
     border-width: 1px;
     border-style: solid;
-    border-color: var(--c-sui-studio-doc-neutral10);
     background: var(--c-sui-studio-doc-neutral10);
+    border-color: var(--c-sui-studio-doc-neutral10);
   }
   &.sui-studio-doc-box-outline {
-    background: var(--c-sui-studio-doc-neutral0);
     border-width: 1px;
     border-style: solid;
-    border-color: var(--c-sui-studio-doc-neutral10);
+    background: var(--c-sui-studio-doc-neutral0);
+    border-color: var(--c-sui-studio-doc-neutral7);
     &.sui-studio-doc-box-mode-dark {
-      border-color: var(--c-sui-studio-doc-neutral0);
       background: var(--c-sui-studio-doc-neutral10);
+      border-color: var(--c-sui-studio-doc-neutral3);
     }
   }
   &-full-screen {
