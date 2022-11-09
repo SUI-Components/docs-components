@@ -5,7 +5,7 @@
   "main": "components/index.js",
   "scripts": {
     "build": "sui-studio build",
-    "check:release": "sui-studio check-release",
+    "check:release": "sui-mono check",
     "co": "sui-mono commit",
     "commitmsg": "validate-commit-msg",
     "dev": "sui-studio dev",
