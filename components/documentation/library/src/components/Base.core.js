@@ -89,9 +89,6 @@ export const transformProps = (
         [`sui-studio-doc${prefix}-full-screen`]: fullScreen,
         [`sui-studio-doc${prefix}-full-width`]: fullWidth,
         [`sui-studio-doc${prefix}-full-height`]: fullHeight
-        // [`sui-studio-doc${prefix}-mode-${mode}`]: Object.entries(MODES)
-        //   .flat()
-        //   .includes(mode)
       },
       className
     )
