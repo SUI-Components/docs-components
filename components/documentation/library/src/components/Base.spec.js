@@ -72,7 +72,7 @@ describe('components', () => {
         const element = getByText(props.children)
 
         // Then
-        expect(element.localName).toBe('span')
+        expect(element.localName).toBe('div')
         expect(element.innerHTML).toBeString()
         expect(element.innerHTML).toBe(props.children)
         expect(container).toMatchSnapshot()

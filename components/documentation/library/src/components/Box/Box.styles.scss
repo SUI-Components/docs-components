@@ -5,21 +5,11 @@
   border-style: solid;
   background: var(--c-sui-studio-doc-neutral0);
   border-color: var(--c-sui-studio-doc-neutral0);
-  &.sui-studio-doc-box-mode-dark {
-    border-width: 1px;
-    border-style: solid;
-    background: var(--c-sui-studio-doc-neutral10);
-    border-color: var(--c-sui-studio-doc-neutral10);
-  }
   &.sui-studio-doc-box-outline {
     border-width: 1px;
     border-style: solid;
     background: var(--c-sui-studio-doc-neutral0);
     border-color: var(--c-sui-studio-doc-neutral7);
-    &.sui-studio-doc-box-mode-dark {
-      background: var(--c-sui-studio-doc-neutral10);
-      border-color: var(--c-sui-studio-doc-neutral3);
-    }
   }
   &-full-screen {
     width: 100vw;

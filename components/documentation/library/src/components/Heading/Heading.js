@@ -10,51 +10,23 @@ import './Heading.scss'
 export const HEADING_ELEMENT = {
   h1: {
     elementType: 'h1',
-    className: (cn, mode) =>
-      cx(
-        'sui-studio-doc-heading',
-        'sui-studio-doc-heading-h1',
-        {
-          [`sui-studio-doc-heading-mode-${mode}`]: mode
-        },
-        cn
-      )
+    className: cn =>
+      cx('sui-studio-doc-heading', 'sui-studio-doc-heading-h1', cn)
   },
   h2: {
     elementType: 'h2',
-    className: (cn, mode) =>
-      cx(
-        'sui-studio-doc-heading',
-        'sui-studio-doc-heading-h2',
-        {
-          [`sui-studio-doc-heading-mode-${mode}`]: mode
-        },
-        cn
-      )
+    className: cn =>
+      cx('sui-studio-doc-heading', 'sui-studio-doc-heading-h2', cn)
   },
   h3: {
     elementType: 'h3',
-    className: (cn, mode) =>
-      cx(
-        'sui-studio-doc-heading',
-        'sui-studio-doc-heading-h3',
-        {
-          [`sui-studio-doc-heading-mode-${mode}`]: mode
-        },
-        cn
-      )
+    className: cn =>
+      cx('sui-studio-doc-heading', 'sui-studio-doc-heading-h3', cn)
   },
   h4: {
     elementType: 'h4',
-    className: (cn, mode) =>
-      cx(
-        'sui-studio-doc-heading',
-        'sui-studio-doc-heading-h4',
-        {
-          [`sui-studio-doc-heading-mode-${mode}`]: mode
-        },
-        cn
-      )
+    className: cn =>
+      cx('sui-studio-doc-heading', 'sui-studio-doc-heading-h4', cn)
   }
 }
 
@@ -96,7 +68,8 @@ const H1 = forwardRef(
   ) => (
     <Heading
       {...props}
-      className={HEADING_ELEMENT.h1.className(className, mode)}
+      data-theme-mode={mode}
+      className={HEADING_ELEMENT.h1.className(className)}
       elementType={elementType}
       mode={mode}
       ref={forwardedRef}
@@ -125,7 +98,8 @@ const H2 = forwardRef(
   ) => (
     <Heading
       {...props}
-      className={HEADING_ELEMENT.h2.className(className, mode)}
+      data-theme-mode={mode}
+      className={HEADING_ELEMENT.h2.className(className)}
       elementType={elementType}
       mode={mode}
       ref={forwardedRef}
@@ -154,7 +128,8 @@ const H3 = forwardRef(
   ) => (
     <Heading
       {...props}
-      className={HEADING_ELEMENT.h3.className(className, mode)}
+      data-theme-mode={mode}
+      className={HEADING_ELEMENT.h3.className(className)}
       elementType={elementType}
       mode={mode}
       ref={forwardedRef}
@@ -183,7 +158,8 @@ const H4 = forwardRef(
   ) => (
     <Heading
       {...props}
-      className={HEADING_ELEMENT.h4.className(className, mode)}
+      data-theme-mode={mode}
+      className={HEADING_ELEMENT.h4.className(className)}
       elementType={elementType}
       mode={mode}
       ref={forwardedRef}

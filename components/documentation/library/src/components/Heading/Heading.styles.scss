@@ -1,6 +1,7 @@
 .sui-studio-doc.sui-studio-doc-heading {
   margin: 0.8em 0 0.2em 0;
   font-family: var(--ff-sui-studio-doc-sans-serif);
+  color: var(--c-sui-studio-doc-neutral10);
   @at-root {
     &-h1,
     h1#{&} {
@@ -34,14 +35,6 @@
       text-transform: uppercase;
       margin-block-start: 0.8em;
       margin-block-end: 0.2em;
-    }
-  }
-  &.sui-studio-doc-mode {
-    &-light {
-      color: var(--c-sui-studio-doc-neutral10);
-    }
-    &-dark {
-      color: var(--c-sui-studio-doc-neutral0);
     }
   }
 }

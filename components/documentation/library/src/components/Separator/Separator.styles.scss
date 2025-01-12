@@ -16,10 +16,9 @@
       min-height: 2px;
     }
   }
-  &.sui-studio-doc-separator-mode-dark {
-    .sui-studio-doc-separator-content {
-      background-color: var(--c-sui-studio-doc-neutral0);
-      color: var(--c-sui-studio-doc-neutral10);
-    }
+
+  .sui-studio-doc-separator-content {
+    background-color: var(--c-sui-studio-doc-neutral0);
+    color: var(--c-sui-studio-doc-neutral10);
   }
 }

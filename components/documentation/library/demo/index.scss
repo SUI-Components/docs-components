@@ -1,3 +1,13 @@
+:root {
+  color-scheme: light dark;
+  @media (prefers-color-scheme: light) {
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
 .demo-doc-lib {
   // eslint-disable
 }

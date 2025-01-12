@@ -1,13 +1,6 @@
 .sui-studio-doc-grid {
   display: grid;
-  &-mode {
-    &-light {
-      color: var(--c-sui-studio-doc-neutral10);
-    }
-    &-dark {
-      color: var(--c-sui-studio-doc-neutral0);
-    }
-  }
+  color: var(--c-sui-studio-doc-neutral10);
   &-cell {
     &-ta {
       &-left {

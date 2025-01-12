@@ -7,13 +7,4 @@
   border: solid 1px var(--c-sui-studio-doc-neutral2);
   border-radius: 4px;
   padding: 2px 4px;
-  &.sui-studio-doc-mode-light {
-    background: hsl(var(--c-palette-neutral-hue), 0%, 95%);
-    border: solid 1px var(--c-sui-studio-doc-neutral2);
-    color: var(--c-sui-studio-doc-secondary5);
-  }
-  &.sui-studio-doc-mode-dark {
-    background: var(--c-sui-studio-doc-neutral-darkest);
-    border: solid 1px var(--c-sui-studio-doc-neutral);
-  }
 }

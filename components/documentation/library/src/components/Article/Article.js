@@ -31,7 +31,6 @@ let Article = forwardRef(
         className={cx(
           'sui-studio-doc-article',
           {
-            [`sui-studio-doc-article-mode-${mode}`]: mode,
             'sui-studio-doc-article-full-screen': fullScreen,
             'sui-studio-doc-article-outline': outline
           },

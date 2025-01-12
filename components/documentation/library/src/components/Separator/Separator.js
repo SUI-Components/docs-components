@@ -2,8 +2,7 @@
 import React, {useContext, forwardRef} from 'react'
 import cx from 'classnames'
 
-import Context from '../../context/Mode'
-import Base, {MODES} from '../Base.core'
+import Base from '../Base.core'
 
 import './Separator.scss'
 
@@ -12,27 +11,17 @@ import './Separator.scss'
  */
 const Separator = forwardRef(
   ({children, className, elementType, mode, ...props}, forwardedRef) => {
-    const contextProps = useContext(Context) || {}
-    const ownMode = mode || contextProps.mode
     return (
       <div
-        className={cx(
-          'sui-studio-doc-separator',
-          {
-            [`sui-studio-doc-separator-mode-${ownMode}`]: ownMode
-          },
-          className
-        )}
+        data-theme-mode={mode}
+        className={cx('sui-studio-doc-separator', className)}
       >
         <hr />
         <Base
           {...props}
           className={cx('sui-studio-doc-separator-content', className)}
           elementType={elementType}
-          {...{
-            ...contextProps,
-            mode: ownMode === MODES.LIGHT ? MODES.DARK : MODES.LIGHT
-          }}
+          mode={mode}
           ref={forwardedRef}
         >
           {children}

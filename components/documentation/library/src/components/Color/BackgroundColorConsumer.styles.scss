@@ -1,7 +1,0 @@
-@import '../core';
-
-$base-class: '#{$PREFIX}-get-background';
-
-#{$PREFIX}#{$base-class} {
-  display: contents;
-}

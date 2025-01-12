@@ -9,8 +9,6 @@ import React, {
 } from 'react'
 import cx from 'classnames'
 
-import Context from '../context/Mode'
-
 export const MODES = {
   LIGHT: 'light',
   DARK: 'dark'
@@ -41,33 +39,9 @@ export const TEXT_DECORATION = {
   LINETHROUGH: 'line-through'
 }
 
-export const DocumentationProvider = ({
-  children,
-  mode = MODES.LIGHT,
-  ...otherProps
-}) => {
-  return (
-    <Context.Provider value={{mode, ...otherProps}}>
-      {Children.map(children, child => {
-        cloneElement(child, {mode})
-        return child
-      })}
-    </Context.Provider>
-  )
-}
-
 export const withDocumentationProvider = Component => {
-  const Base = forwardRef(({mode, ...otherProps} = {}, forwardedRef) => {
-    const contextProps = useContext(Context) || {}
-    return (
-      <DocumentationProvider mode={mode || contextProps.mode}>
-        <Component
-          ref={forwardedRef}
-          mode={mode || contextProps.mode || MODES.LIGHT}
-          {...otherProps}
-        />
-      </DocumentationProvider>
-    )
+  const Base = forwardRef(({...otherProps} = {}, forwardedRef) => {
+    return <Component ref={forwardedRef} {...otherProps} />
   })
   return Base
 }
@@ -92,6 +66,7 @@ export const transformProps = (
   const prefix = displayName ? `-${displayName}` : ''
   return {
     ...props,
+    ...(mode && {'data-theme-mode': mode}),
     className: cx(
       `sui-studio-doc${prefix}`,
       {
@@ -113,10 +88,10 @@ export const transformProps = (
         [`sui-studio-doc${prefix}-deprecated`]: deprecated,
         [`sui-studio-doc${prefix}-full-screen`]: fullScreen,
         [`sui-studio-doc${prefix}-full-width`]: fullWidth,
-        [`sui-studio-doc${prefix}-full-height`]: fullHeight,
-        [`sui-studio-doc${prefix}-mode-${mode}`]: Object.entries(MODES)
-          .flat()
-          .includes(mode)
+        [`sui-studio-doc${prefix}-full-height`]: fullHeight
+        // [`sui-studio-doc${prefix}-mode-${mode}`]: Object.entries(MODES)
+        //   .flat()
+        //   .includes(mode)
       },
       className
     )
@@ -125,11 +100,7 @@ export const transformProps = (
 
 const BaseCore = forwardRef(
   ({children, elementType, ...otherProps}, forwardedRef) => {
-    const contextProps = useContext(Context) || {}
-    const ownProps = Object.assign(
-      {},
-      transformProps({...contextProps, ...otherProps})
-    )
+    const ownProps = Object.assign({}, transformProps({...otherProps}))
     let ownElementType = elementType
     if (
       (elementType === null ||

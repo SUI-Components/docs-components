@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`components Pantone default should have proper displayName attribute 1`] = `"Pantone"`;

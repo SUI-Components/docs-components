@@ -12,12 +12,16 @@
     $color-hue-code,
     $saturation,
     $lightning-range-min,
-    $lightning-range-max
+    $lightning-range-max,
+    $isDark: false
   ) {
     @for $i from 0 through 10 {
       $step: $lightning-range-max - $lightning-range-min;
       $factor: $lightning-range-min + ($i * $step) * 0.1;
       $lightning: 100% - $factor;
+      @if ($isDark) {
+        $lightning: $factor - 0%;
+      }
       --c-sui-studio-doc-#{$name}#{$i}: hsl(
         #{$color-hue-code},
         #{$saturation},
@@ -25,93 +29,249 @@
       );
     }
   }
+
   // STUDIO DOC COLORS
   // grey
-  @include color-step('neutral', var(--c-palette-neutral-hue), 0%, 0, 97);
-  --c-sui-studio-doc-neutral-lightest: var(--c-sui-studio-doc-neutral3);
-  --c-sui-studio-doc-neutral-light: var(--c-sui-studio-doc-neutral4);
-  --c-sui-studio-doc-neutral: var(--c-sui-studio-doc-neutral5);
-  --c-sui-studio-doc-neutral-dark: var(--c-sui-studio-doc-neutral6);
-  --c-sui-studio-doc-neutral-darkest: var(--c-sui-studio-doc-neutral7);
+  [data-theme-mode='light'] {
+    @include color-step('neutral', var(--c-palette-neutral-hue), 0%, 0, 97);
+    --c-sui-studio-doc-neutral-lightest: var(--c-sui-studio-doc-neutral7);
+    --c-sui-studio-doc-neutral-light: var(--c-sui-studio-doc-neutral6);
+    --c-sui-studio-doc-neutral: var(--c-sui-studio-doc-neutral5);
+    --c-sui-studio-doc-neutral-dark: var(--c-sui-studio-doc-neutral4);
+    --c-sui-studio-doc-neutral-darkest: var(--c-sui-studio-doc-neutral3);
+  }
+  [data-theme-mode='dark'] {
+    @include color-step(
+      'neutral',
+      var(--c-palette-neutral-hue),
+      0%,
+      0,
+      97,
+      true
+    );
+    --c-sui-studio-doc-neutral-lightest: var(--c-sui-studio-doc-neutral7);
+    --c-sui-studio-doc-neutral-light: var(--c-sui-studio-doc-neutral6);
+    --c-sui-studio-doc-neutral: var(--c-sui-studio-doc-neutral5);
+    --c-sui-studio-doc-neutral-dark: var(--c-sui-studio-doc-neutral4);
+    --c-sui-studio-doc-neutral-darkest: var(--c-sui-studio-doc-neutral3);
+  }
 
   /*********************
    * BRAND             *
    *********************/
 
   // primary
-  @include color-step(
-    'primary',
-    var(--c-palette-spectre-blue-hue),
-    100%,
-    5,
-    80
-  );
-  --c-sui-studio-doc-primary-lightest: var(--c-sui-studio-doc-primary3);
-  --c-sui-studio-doc-primary-light: var(--c-sui-studio-doc-primary4);
-  --c-sui-studio-doc-primary: var(--c-sui-studio-doc-primary5);
-  --c-sui-studio-doc-primary-dark: var(--c-sui-studio-doc-primary6);
-  --c-sui-studio-doc-primary-darkest: var(--c-sui-studio-doc-primary7);
+  [data-theme-mode='light'] {
+    @include color-step(
+      'primary',
+      var(--c-palette-spectre-blue-hue),
+      100%,
+      5,
+      80
+    );
+    --c-sui-studio-doc-primary-lightest: var(--c-sui-studio-doc-primary7);
+    --c-sui-studio-doc-primary-light: var(--c-sui-studio-doc-primary6);
+    --c-sui-studio-doc-primary: var(--c-sui-studio-doc-primary5);
+    --c-sui-studio-doc-primary-dark: var(--c-sui-studio-doc-primary4);
+    --c-sui-studio-doc-primary-darkest: var(--c-sui-studio-doc-primary3);
+  }
+  [data-theme-mode='dark'] {
+    @include color-step(
+      'primary',
+      var(--c-palette-spectre-blue-hue),
+      100%,
+      5,
+      80,
+      true
+    );
+    --c-sui-studio-doc-primary-lightest: var(--c-sui-studio-doc-primary7);
+    --c-sui-studio-doc-primary-light: var(--c-sui-studio-doc-primary6);
+    --c-sui-studio-doc-primary: var(--c-sui-studio-doc-primary5);
+    --c-sui-studio-doc-primary-dark: var(--c-sui-studio-doc-primary4);
+    --c-sui-studio-doc-primary-darkest: var(--c-sui-studio-doc-primary3);
+  }
 
   // secondary
-  @include color-step('secondary', var(--c-palette-hot-pink-hue), 100%, 5, 80);
-  --c-sui-studio-doc-secondary-lightest: var(--c-sui-studio-doc-secondary3);
-  --c-sui-studio-doc-secondary-light: var(--c-sui-studio-doc-secondary4);
-  --c-sui-studio-doc-secondary: var(--c-sui-studio-doc-secondary5);
-  --c-sui-studio-doc-secondary-dark: var(--c-sui-studio-doc-secondary6);
-  --c-sui-studio-doc-secondary-darkest: var(--c-sui-studio-doc-secondary7);
+  [data-theme-mode='light'] {
+    @include color-step(
+      'secondary',
+      var(--c-palette-hot-pink-hue),
+      100%,
+      5,
+      80
+    );
+    --c-sui-studio-doc-secondary-lightest: var(--c-sui-studio-doc-secondary7);
+    --c-sui-studio-doc-secondary-light: var(--c-sui-studio-doc-secondary6);
+    --c-sui-studio-doc-secondary: var(--c-sui-studio-doc-secondary5);
+    --c-sui-studio-doc-secondary-dark: var(--c-sui-studio-doc-secondary4);
+    --c-sui-studio-doc-secondary-darkest: var(--c-sui-studio-doc-secondary3);
+  }
+  [data-theme-mode='dark'] {
+    @include color-step(
+      'secondary',
+      var(--c-palette-hot-pink-hue),
+      100%,
+      5,
+      80,
+      true
+    );
+    --c-sui-studio-doc-secondary-lightest: var(--c-sui-studio-doc-secondary7);
+    --c-sui-studio-doc-secondary-light: var(--c-sui-studio-doc-secondary6);
+    --c-sui-studio-doc-secondary: var(--c-sui-studio-doc-secondary5);
+    --c-sui-studio-doc-secondary-dark: var(--c-sui-studio-doc-secondary4);
+    --c-sui-studio-doc-secondary-darkest: var(--c-sui-studio-doc-secondary3);
+  }
 
   /*********************
    * FUNCTIONAL        *
    *********************/
 
   // danger
-  @include color-step('danger', var(--c-palette-cinnabar-hue), 70%, 20, 80);
-  --c-sui-studio-doc-danger-lightest: var(--c-sui-studio-doc-danger3);
-  --c-sui-studio-doc-danger-light: var(--c-sui-studio-doc-danger4);
-  --c-sui-studio-doc-danger: var(--c-sui-studio-doc-danger5);
-  --c-sui-studio-doc-danger-dark: var(--c-sui-studio-doc-danger6);
-  --c-sui-studio-doc-danger-darkest: var(--c-sui-studio-doc-danger7);
+  [data-theme-mode='light'] {
+    @include color-step('danger', var(--c-palette-cinnabar-hue), 70%, 20, 80);
+    --c-sui-studio-doc-danger-lightest: var(--c-sui-studio-doc-danger7);
+    --c-sui-studio-doc-danger-light: var(--c-sui-studio-doc-danger6);
+    --c-sui-studio-doc-danger: var(--c-sui-studio-doc-danger5);
+    --c-sui-studio-doc-danger-dark: var(--c-sui-studio-doc-danger4);
+    --c-sui-studio-doc-danger-darkest: var(--c-sui-studio-doc-danger3);
+  }
+
+  [data-theme-mode='dark'] {
+    @include color-step(
+      'danger',
+      var(--c-palette-cinnabar-hue),
+      70%,
+      20,
+      80,
+      true
+    );
+    --c-sui-studio-doc-danger-lightest: var(--c-sui-studio-doc-danger7);
+    --c-sui-studio-doc-danger-light: var(--c-sui-studio-doc-danger6);
+    --c-sui-studio-doc-danger: var(--c-sui-studio-doc-danger5);
+    --c-sui-studio-doc-danger-dark: var(--c-sui-studio-doc-danger4);
+    --c-sui-studio-doc-danger-darkest: var(--c-sui-studio-doc-danger3);
+  }
 
   // disable
-  @include color-step('disable', var(--c-palette-neutral-hue), 0%, 0, 10);
-  --c-sui-studio-doc-disable-lightest: var(--c-sui-studio-doc-disable3);
-  --c-sui-studio-doc-disable-light: var(--c-sui-studio-doc-disable4);
-  --c-sui-studio-doc-disable: var(--c-sui-studio-doc-disable5);
-  --c-sui-studio-doc-disable-dark: var(--c-sui-studio-doc-disable6);
-  --c-sui-studio-doc-disable-darkest: var(--c-sui-studio-doc-disable7);
+  [data-theme-mode='light'] {
+    @include color-step('disable', var(--c-palette-neutral-hue), 0%, 0, 10);
+    --c-sui-studio-doc-disable-lightest: var(--c-sui-studio-doc-disable7);
+    --c-sui-studio-doc-disable-light: var(--c-sui-studio-doc-disable6);
+    --c-sui-studio-doc-disable: var(--c-sui-studio-doc-disable5);
+    --c-sui-studio-doc-disable-dark: var(--c-sui-studio-doc-disable4);
+    --c-sui-studio-doc-disable-darkest: var(--c-sui-studio-doc-disable3);
+  }
+  [data-theme-mode='dark'] {
+    @include color-step(
+      'disable',
+      var(--c-palette-neutral-hue),
+      0%,
+      0,
+      10,
+      true
+    );
+    --c-sui-studio-doc-disable-lightest: var(--c-sui-studio-doc-disable7);
+    --c-sui-studio-doc-disable-light: var(--c-sui-studio-doc-disable6);
+    --c-sui-studio-doc-disable: var(--c-sui-studio-doc-disable5);
+    --c-sui-studio-doc-disable-dark: var(--c-sui-studio-doc-disable4);
+    --c-sui-studio-doc-disable-darkest: var(--c-sui-studio-doc-disable3);
+  }
 
   // warning
-  @include color-step('warning', var(--c-palete-saffron-hue), 100%, 30, 70);
-  --c-sui-studio-doc-warning-lightest: var(--c-sui-studio-doc-warning3);
-  --c-sui-studio-doc-warning-light: var(--c-sui-studio-doc-warning4);
-  --c-sui-studio-doc-warning: var(--c-sui-studio-doc-warning5);
-  --c-sui-studio-doc-warning-dark: var(--c-sui-studio-doc-warning6);
-  --c-sui-studio-doc-warning-darkest: var(--c-sui-studio-doc-warning7);
+  [data-theme-mode='light'] {
+    @include color-step('warning', var(--c-palete-saffron-hue), 100%, 30, 70);
+    --c-sui-studio-doc-warning-lightest: var(--c-sui-studio-doc-warning7);
+    --c-sui-studio-doc-warning-light: var(--c-sui-studio-doc-warning6);
+    --c-sui-studio-doc-warning: var(--c-sui-studio-doc-warning5);
+    --c-sui-studio-doc-warning-dark: var(--c-sui-studio-doc-warning4);
+    --c-sui-studio-doc-warning-darkest: var(--c-sui-studio-doc-warning3);
+  }
+  [data-theme-mode='dark'] {
+    @include color-step(
+      'warning',
+      var(--c-palete-saffron-hue),
+      100%,
+      30,
+      70,
+      true
+    );
+    --c-sui-studio-doc-warning-lightest: var(--c-sui-studio-doc-warning7);
+    --c-sui-studio-doc-warning-light: var(--c-sui-studio-doc-warning6);
+    --c-sui-studio-doc-warning: var(--c-sui-studio-doc-warning5);
+    --c-sui-studio-doc-warning-dark: var(--c-sui-studio-doc-warning4);
+    --c-sui-studio-doc-warning-darkest: var(--c-sui-studio-doc-warning3);
+  }
 
   // info
-  @include color-step('info', var(--c-palete-mountain-meadow-hue), 50%, 20, 80);
-  --c-sui-studio-doc-info-lightest: var(--c-sui-studio-doc-info3);
-  --c-sui-studio-doc-info-light: var(--c-sui-studio-doc-info4);
-  --c-sui-studio-doc-info: var(--c-sui-studio-doc-info5);
-  --c-sui-studio-doc-info-dark: var(--c-sui-studio-doc-info6);
-  --c-sui-studio-doc-info-darkest: var(--c-sui-studio-doc-info7);
+  [data-theme-mode='light'] {
+    @include color-step(
+      'info',
+      var(--c-palete-mountain-meadow-hue),
+      50%,
+      20,
+      80
+    );
+    --c-sui-studio-doc-info-lightest: var(--c-sui-studio-doc-info7);
+    --c-sui-studio-doc-info-light: var(--c-sui-studio-doc-info6);
+    --c-sui-studio-doc-info: var(--c-sui-studio-doc-info5);
+    --c-sui-studio-doc-info-dark: var(--c-sui-studio-doc-info4);
+    --c-sui-studio-doc-info-darkest: var(--c-sui-studio-doc-info3);
+  }
+  [data-theme-mode='dark'] {
+    @include color-step(
+      'info',
+      var(--c-palete-mountain-meadow-hue),
+      50%,
+      20,
+      80,
+      true
+    );
+    --c-sui-studio-doc-info-lightest: var(--c-sui-studio-doc-info7);
+    --c-sui-studio-doc-info-light: var(--c-sui-studio-doc-info6);
+    --c-sui-studio-doc-info: var(--c-sui-studio-doc-info5);
+    --c-sui-studio-doc-info-dark: var(--c-sui-studio-doc-info4);
+    --c-sui-studio-doc-info-darkest: var(--c-sui-studio-doc-info3);
+  }
 
   // link
-  @include color-step('link', var(--c-palette-spectre-blue-hue), 100%, 20, 80);
-  --c-sui-studio-doc-link-lightest: var(--c-sui-studio-doc-link3);
-  --c-sui-studio-doc-link-light: var(--c-sui-studio-doc-link4);
-  --c-sui-studio-doc-link: var(--c-sui-studio-doc-link5);
-  --c-sui-studio-doc-link-dark: var(--c-sui-studio-doc-link6);
-  --c-sui-studio-doc-link-darkest: var(--c-sui-studio-doc-link7);
+  [data-theme-mode='light'] {
+    @include color-step(
+      'link',
+      var(--c-palette-spectre-blue-hue),
+      100%,
+      20,
+      80
+    );
+    --c-sui-studio-doc-link-lightest: var(--c-sui-studio-doc-link7);
+    --c-sui-studio-doc-link-light: var(--c-sui-studio-doc-link6);
+    --c-sui-studio-doc-link: var(--c-sui-studio-doc-link5);
+    --c-sui-studio-doc-link-dark: var(--c-sui-studio-doc-link4);
+    --c-sui-studio-doc-link-darkest: var(--c-sui-studio-doc-link3);
+  }
+  [data-theme-mode='dark'] {
+    @include color-step(
+      'link',
+      var(--c-palette-spectre-blue-hue),
+      100%,
+      20,
+      80,
+      true
+    );
+    --c-sui-studio-doc-link-lightest: var(--c-sui-studio-doc-link7);
+    --c-sui-studio-doc-link-light: var(--c-sui-studio-doc-link6);
+    --c-sui-studio-doc-link: var(--c-sui-studio-doc-link5);
+    --c-sui-studio-doc-link-dark: var(--c-sui-studio-doc-link4);
+    --c-sui-studio-doc-link-darkest: var(--c-sui-studio-doc-link3);
+  }
 
   // sui-studio colors
-  --c-sui-studio-doc-white: var(--c-palette-white);
+  // --c-sui-studio-doc-white: var(--c-palette-white);
   // --c-sui-studio-doc-base: var(--c-palette-dark-charcoal);
   // --c-sui-studio-doc-link: var(--c-palette-dark-charcoal);
-  --c-sui-studio-doc-hightlight: var(--c-palette-hot-pink);
+  // --c-sui-studio-doc-highlight: var(--c-palette-hot-pink);
 
-  --c-sui-studio-doc-dark-mode-white: var(--c-palette-white);
-  --c-sui-studio-doc-dark-mode-base: var(--c-palette-tungsten);
-  --c-sui-studio-doc-dark-mode-link: var(--c-palette-tungsten);
-  --c-sui-studio-doc-dark-mode-hightlight: var(--c-palette-hot-pink);
+  // --c-sui-studio-doc-dark-mode-white: var(--c-palette-white);
+  // --c-sui-studio-doc-dark-mode-base: var(--c-palette-tungsten);
+  // --c-sui-studio-doc-dark-mode-link: var(--c-palette-tungsten);
+  // --c-sui-studio-doc-dark-mode-highlight: var(--c-palette-hot-pink);
 }

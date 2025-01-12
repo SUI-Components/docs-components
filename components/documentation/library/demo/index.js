@@ -11,13 +11,13 @@ export default () => (
   <Grid className="demo-doc-lib" cols={1} gutter={10}>
     <Cell>
       <Grid cols={2} gutter={[5, 10]}>
-        <Cell>
+        <Cell mode="light">
           <Article>
             <Demo />
           </Article>
         </Cell>
-        <Cell>
-          <Article mode="dark">
+        <Cell mode="dark">
+          <Article>
             <Demo />
           </Article>
         </Cell>

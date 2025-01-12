@@ -47,11 +47,8 @@ let Grid = forwardRef(
           gridTemplateColumns: `repeat(${cols}, 1fr)`,
           ...style
         }}
-        className={cx(
-          'sui-studio-doc-grid',
-          {[`sui-studio-doc-grid-mode-${mode}`]: mode},
-          className
-        )}
+        data-theme-mode={mode}
+        className={cx('sui-studio-doc-grid', className)}
         ref={forwardedRef}
       >
         {children}
@@ -103,10 +100,10 @@ let Cell = forwardRef(
             gridColumn: `auto / span ${span}`,
             ...style
           }}
+          data-theme-mode={mode}
           className={cx(
             'sui-studio-doc-grid-cell',
             {
-              [`sui-studio-doc-grid-cell-mode-${mode}`]: mode,
               [`sui-studio-doc-grid-cell-ta-${align}`]: align
             },
             className

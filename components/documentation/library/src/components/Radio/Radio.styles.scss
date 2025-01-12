@@ -69,29 +69,19 @@
       }
     }
   }
+
   &.sui-studio-doc-radio-button--checked {
-    &.sui-studio-doc-mode-dark,
-    &.sui-studio-doc-mode-light {
-      background-color: var(--c-sui-studio-doc-primary);
-      &.sui-studio-doc-button-outline {
-        background-color: transparent;
-      }
-    }
-  }
-  &.sui-studio-doc-mode-dark {
-    &.sui-studio-doc-radio-button--checked {
-      background-color: var(--c-sui-studio-doc-primary);
+    background-color: var(--c-sui-studio-doc-primary);
+    color: var(--c-sui-studio-doc-neutral10);
+    & * {
       color: var(--c-sui-studio-doc-neutral10);
+    }
+    &.sui-studio-doc-button-outline {
+      box-shadow: inset 0 0 0 1px var(--c-sui-studio-doc-primary);
+      background-color: transparent;
+      color: var(--c-sui-studio-doc-primary);
       & * {
-        color: var(--c-sui-studio-doc-neutral10);
-      }
-      &.sui-studio-doc-button-outline {
-        box-shadow: inset 0 0 0 1px var(--c-sui-studio-doc-primary);
-        background-color: transparent;
         color: var(--c-sui-studio-doc-primary);
-        & * {
-          color: var(--c-sui-studio-doc-primary);
-        }
       }
     }
   }
@@ -121,30 +111,22 @@
           border-left-color: var(--c-sui-studio-doc-primary);
         }
       }
-      &.sui-studio-doc-mode-light {
-        & * {
-          color: var(--c-sui-studio-doc-neutral10);
-        }
+
+      & * {
+        color: var(--c-sui-studio-doc-neutral10);
       }
-      &.sui-studio-doc-mode-dark {
+
+      &.sui-studio-doc-radio-button--checked {
+        background-color: transparent;
+        color: var(--c-sui-studio-doc-primary);
         & * {
-          color: var(--c-sui-studio-doc-neutral0);
-        }
-      }
-      &.sui-studio-doc-mode-light,
-      &.sui-studio-doc-mode-dark {
-        &.sui-studio-doc-radio-button--checked {
-          background-color: transparent;
           color: var(--c-sui-studio-doc-primary);
-          & * {
-            color: var(--c-sui-studio-doc-primary);
-          }
         }
-        &:hover {
+      }
+      &:hover {
+        color: var(--c-sui-studio-doc-primary-light);
+        & * {
           color: var(--c-sui-studio-doc-primary-light);
-          & * {
-            color: var(--c-sui-studio-doc-primary-light);
-          }
         }
       }
     }

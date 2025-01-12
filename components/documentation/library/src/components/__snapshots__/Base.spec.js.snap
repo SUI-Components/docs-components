@@ -5,7 +5,7 @@ exports[`components Base default should assign default element in class is given
   id="test-container"
 >
   <span
-    class="sui-studio-doc sui-studio-doc-mode-light test-classname"
+    class="sui-studio-doc test-classname"
   >
     children
   </span>
@@ -17,7 +17,7 @@ exports[`components Base default should assign default elementType if fontWeight
   id="test-container"
 >
   <span
-    class="sui-studio-doc sui-studio-doc-fw-bold sui-studio-doc-mode-light"
+    class="sui-studio-doc sui-studio-doc-fw-bold"
   >
     children
   </span>
@@ -29,7 +29,7 @@ exports[`components Base default should assign default elementType if it is depr
   id="test-container"
 >
   <span
-    class="sui-studio-doc sui-studio-doc-deprecated sui-studio-doc-mode-light"
+    class="sui-studio-doc sui-studio-doc-deprecated"
   >
     children
   </span>
@@ -41,7 +41,7 @@ exports[`components Base default should assign default elementType if textDecora
   id="test-container"
 >
   <span
-    class="sui-studio-doc sui-studio-doc-td-underline sui-studio-doc-mode-light"
+    class="sui-studio-doc sui-studio-doc-td-underline"
   >
     children
   </span>
@@ -53,7 +53,7 @@ exports[`components Base default should assign default elementType if textTransf
   id="test-container"
 >
   <span
-    class="sui-studio-doc sui-studio-doc-tt-capitalize sui-studio-doc-mode-light"
+    class="sui-studio-doc sui-studio-doc-tt-capitalize"
   >
     children
   </span>
@@ -64,11 +64,7 @@ exports[`components Base default should display wrapping default children only 1
 <div
   id="test-container"
 >
-  <span
-    class="sui-studio-doc sui-studio-doc-mode-light"
-  >
-    children
-  </span>
+  children
 </div>
 `;
 
@@ -79,7 +75,7 @@ exports[`components Base default should render elementType if an element is give
   id="test-container"
 >
   <element-type
-    classname="sui-studio-doc sui-studio-doc-mode-light"
+    classname="sui-studio-doc"
   >
     children
   </element-type>

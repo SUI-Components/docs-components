@@ -36,6 +36,7 @@
   "homepage": "https://github.com/SUI-Components/docs-components#readme",
   "devDependencies": {
     "@s-ui/helpers": "1",
+    "@s-ui/js-compiler": "1",
     "@s-ui/mono": "2",
     "@s-ui/precommit": "2",
     "@s-ui/studio": "10",

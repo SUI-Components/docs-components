@@ -35,10 +35,10 @@ let Box = forwardRef(
       elementType,
       {
         ...props,
+        ...(mode && {'data-theme-mode': mode}),
         className: cx(
           'sui-studio-doc-box',
           {
-            [`sui-studio-doc-box-mode-${mode}`]: mode,
             'sui-studio-doc-box-full-screen': fullScreen,
             'sui-studio-doc-box-outline': outline
           },
