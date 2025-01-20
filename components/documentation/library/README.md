@@ -29,12 +29,6 @@
 > #### [**Code**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/Code/Code.md)
 > HTML `code` element DOC styled
 
-> #### [**BackgroundColorConsumer**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/BackgroundColorConsumer/BackgroundColorConsumer.md)
-> Pantone card of the background element color
-
-> #### [**Pantone**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/Pantone/Pantone.md)
-> Pantone card of the background element color
-
 > #### [**Grid**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/Grid/Grid.md)
 > div element css-grid styled in order to allocate elements
 
