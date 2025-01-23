@@ -67,7 +67,6 @@ const Radio = forwardRef(
           onClick={onClickHandler}
           onChange={onChange}
           checked={checkedState}
-          aria-label={label || value}
           value={value}
           name={name || radioGroupContext.name}
           ref={forwardedRef}
