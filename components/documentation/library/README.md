@@ -68,6 +68,9 @@
 > #### [**FlatColorIcon**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/FlatColorIcon/FlatColorIcon.md)
 > Flat Color Icon DOC styled
 
+> #### [**MaterialDesignIcon**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/MaterialDesignIcon/MaterialDesignIcon.md)
+> Material Design Icon DOC styled
+
 > #### [**Input**](https://github.com/SUI-Components/docs-components/blob/master/components/documentation/library/src/components/Input/Input.md)
 > HTML `input` element DOC styled
 
