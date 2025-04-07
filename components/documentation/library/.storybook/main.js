@@ -6,6 +6,7 @@ module.exports = {
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    './addons/theme-mode/manager.js',
     {
       name: '@storybook/preset-scss',
       options: {

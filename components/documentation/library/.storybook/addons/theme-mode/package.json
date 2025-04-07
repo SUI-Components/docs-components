@@ -1,0 +1,63 @@
+{
+  "name": "@s-ui/documentation-library-addons-theme-mode",
+  "version": "6.1.0",
+  "description": "A storybook addon to show different color-schema for your preview",
+  "keywords": [
+    "addon",
+    "color-schema",
+    "react",
+    "storybook"
+  ],
+  "exports": {
+    "./manager": "./src/manager.js",
+    "./preview": "./src/preview.js",
+    "./package.json": "./package.json"
+  },
+  "bundler": {
+    "exportEntries": [
+      "src/index.js"
+    ],
+    "managerEntries": [
+      "src/manager.js"
+    ],
+    "previewEntries": [
+      "src/preview.js"
+    ]
+  },
+  "license": "MIT",
+  "main": "src/index.js",
+  "scripts": {
+    "prepare": "npm run build:js && npm run build:styles",
+    "build:js": "babel --presets sui ./src --out-dir ./lib",
+    "build:styles": "cpx './src/**/*.scss' ./lib"
+  },
+  "dependencies": {
+    "@storybook/addons": "6.1.0",
+    "@storybook/api": "6.1.0",
+    "@storybook/client-logger": "6.1.0",
+    "@storybook/components": "6.1.0",
+    "@storybook/core-events": "6.1.0",
+    "@storybook/theming": "6.1.0",
+    "use-prefers-color-scheme": "1.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "7",
+    "@babel/preset-env": "7",
+    "@babel/preset-react": "7"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
