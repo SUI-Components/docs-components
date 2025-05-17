@@ -1,16 +1,16 @@
 import React from 'react'
-import * as materialDesignIcons from 'react-icons/md'
+import * as vsCodeIcons from 'react-icons/vsc'
 import {Grid, Cell, Small} from '../../main'
 
-import MaterialDesignIcon from './MaterialDesignIcon'
+import VSCodeIcon from './VSCodeIcon'
 
-const materialDesignIconOptions = Object.getOwnPropertyNames(
-  materialDesignIcons
+const vsCodeIconOptions = Object.getOwnPropertyNames(
+  vsCodeIcons
 ).filter(k => k !== '__esModule')
 
 export default {
-  title: 'Components/Icon/MaterialDesignIcon',
-  component: MaterialDesignIcon,
+  title: 'Components/Icon/VSCodeIcon',
+  component: VSCodeIcon,
   argTypes: {
     mode: {
       control: {
@@ -25,28 +25,28 @@ export default {
     icon: {
       control: {
         type: 'select',
-        options: materialDesignIconOptions
+        options: vsCodeIconOptions
       }
     }
   }
 }
 
-const Template = props => <MaterialDesignIcon {...props} />
+const Template = props => <VSCodeIcon {...props} />
 
 export const Default = Template.bind({})
 
 Default.args = {
-  icon: materialDesignIconOptions[0]
+  icon: vsCodeIconOptions[0]
 }
 
 export const IconList = props => {
   return (
     <Grid cols={5} gutter={10}>
-      {materialDesignIconOptions.map((icon, index) => (
+      {vsCodeIconOptions.map((icon, index) => (
         <Cell key={index}>
           <Grid cols={1} gutter={0}>
             <Cell>
-              <MaterialDesignIcon {...props} icon={icon} />
+              <VSCodeIcon {...props} icon={icon} />
             </Cell>
             <Cell style={{textAlign: 'center'}}>
               <Small>{icon}</Small>
@@ -67,7 +67,7 @@ export const Size = props => {
     <Grid cols={5} gutter={10}>
       {[...Array(5).keys()].map(index => (
         <Cell key={index}>
-          <MaterialDesignIcon {...props} size={`${index + 1}em`} />
+          <VSCodeIcon {...props} size={`${index + 1}em`} />
         </Cell>
       ))}
     </Grid>
@@ -75,5 +75,5 @@ export const Size = props => {
 }
 
 Size.args = {
-  icon: materialDesignIconOptions[0]
+  icon: vsCodeIconOptions[0]
 }

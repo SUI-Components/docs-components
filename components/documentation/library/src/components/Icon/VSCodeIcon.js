@@ -10,9 +10,9 @@ import Base from '../Base.core'
 import './MaterialDesignIcon.scss'
 
 /**
- * Material Design Icon DOC styled
+ * VSCode Icon DOC styled
  */
-const MaterialDesignIcon = forwardRef(
+const VSCodeIcon = forwardRef(
   (
     {
       className,
@@ -30,7 +30,7 @@ const MaterialDesignIcon = forwardRef(
     const [IconElement, setIconElement] = useState(() => () => null)
     useEffect(() => {
       if (icon) {
-        import('react-icons/md')
+        import('react-icons/vsc')
           .then(module => module[icon])
           .then(Element => {
             setIconElement(() => Element || IconElement)
@@ -42,7 +42,7 @@ const MaterialDesignIcon = forwardRef(
         {...props}
         elementType={elementType}
         className={cx(
-          'sui-studio-doc-icon sui-studio-doc-icon-material-design',
+          'sui-studio-doc-icon sui-studio-doc-icon-flat-color',
           className
         )}
         fullWidth={fullWidth}
@@ -60,8 +60,8 @@ const MaterialDesignIcon = forwardRef(
     )
   }
 )
-MaterialDesignIcon.displayName = 'MaterialDesignIcon'
-MaterialDesignIcon.propTypes = {
+VSCodeIcon.displayName = 'VSCodeIcon'
+VSCodeIcon.propTypes = {
   /**
    * icon color
    */
@@ -79,8 +79,8 @@ MaterialDesignIcon.propTypes = {
    */
   title: PropTypes.string
 }
-MaterialDesignIcon.defaultProps = {}
+VSCodeIcon.defaultProps = {}
 
-export default MaterialDesignIcon
+export default VSCodeIcon
 
-export {MaterialDesignIcon}
+export {VSCodeIcon}
